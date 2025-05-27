@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_publish"
+    app:startDestination="@id/publishFragment">
+
+    <fragment
+        android:id="@+id/publishFragment"
+        android:name="com.greendrading.app.ui.publish.PublishFragment"
+        android:label="发布">
+        
+        <action
+            android:id="@+id/action_publishFragment_to_shareGoodFindsFragment"
+            app:destination="@id/shareGoodFindsFragment" />
+        
+        <action
+            android:id="@+id/action_publishFragment_to_sellOwnItemFragment"
+            app:destination="@id/sellOwnItemFragment" />
+            
+        <action
+            android:id="@+id/action_publishFragment_to_directSaleInfoFragment"
+            app:destination="@id/directSaleInfoFragment" />
+            
+        <action
+            android:id="@+id/action_publishFragment_to_consignmentSelectionFragment"
+            app:destination="@id/consignmentSelectionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shareGoodFindsFragment"
+        android:name="com.greendrading.app.ui.publish.ShareGoodFindsFragment"
+        android:label="晒好物" />
+
+    <fragment
+        android:id="@+id/sellOwnItemFragment"
+        android:name="com.greendrading.app.ui.publish.SellOwnItemFragment"
+        android:label="拍图自己卖" />
+
+    <fragment
+        android:id="@+id/directSaleInfoFragment"
+        android:name="com.greendrading.app.ui.publish.DirectSaleInfoFragment"
+        android:label="挂售详情">
+        <action
+            android:id="@+id/action_directSaleInfoFragment_to_directSaleItemEntryFragment"
+            app:destination="@id/directSaleItemEntryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/directSaleItemEntryFragment"
+        android:name="com.greendrading.app.ui.publish.DirectSaleItemEntryFragment"
+        android:label="挂售商品信息" />
+
+    <fragment
+        android:id="@+id/consignmentSelectionFragment"
+        android:name="com.greendrading.app.ui.publish.ConsignmentSelectionFragment"
+        android:label="寄售选择" />
+</navigation> 
