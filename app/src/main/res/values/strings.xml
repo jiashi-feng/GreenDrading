@@ -1,5 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GreenDrading</string>
-    <string name="media_preview">媒体预览</string>
-    <string name="plant_image">植物图片</string>
+    <string name="app_name">绿色交易</string>
+    
+    <!-- 底部导航栏 -->
+    <string name="nav_home">首页</string>
+    <string name="nav_shop">购物</string>
+    <string name="nav_publish">发布</string>
+    <string name="nav_message">消息</string>
+    <string name="nav_profile">我的</string>
+    
+    <!-- 发布页面 -->
+    <string name="publish_title">发布新商品</string>
+    <string name="publish_subtitle">选择您想要的发布方式</string>
+    <string name="share_good_finds">晒好物</string>
+    <string name="share_good_finds_desc">分享绿意生活</string>
+    <string name="quick_sell">快速出售</string>
+    <string name="quick_sell_desc">拍照即可发布</string>
+    <string name="normal_sell">普通挂售</string>
+    <string name="normal_sell_desc">详细描述出售</string>
+    <string name="consignment">寄卖服务</string>
+    <string name="consignment_desc">平台代理销售</string>
 </resources>
