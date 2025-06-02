@@ -11,17 +11,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.GreenDrading"
-        android:name=".GreenDradingApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ui.publish.PublishActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PublishActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShareGoodFindsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QuickSellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NormalSellActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ConsignmentActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

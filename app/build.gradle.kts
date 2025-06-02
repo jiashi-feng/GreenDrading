@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    namespace = "com.greendrading.app"
+    namespace = "com.example.greendrading"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.greendrading.app"
-        minSdk = 24
+        applicationId = "com.example.greendrading"
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"

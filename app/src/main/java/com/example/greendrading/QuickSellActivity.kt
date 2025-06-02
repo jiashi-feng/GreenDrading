@@ -1,0 +1,11 @@
+package com.example.greendrading
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+class QuickSellActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_quick_sell)
+    }
+} 
