@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#4CAF50</color>
-    <color name="primary_dark">#388E3C</color>
-    <color name="primary_light">#C8E6C9</color>
+    <color name="primary">#2E8B57</color>
+    <color name="primary_dark">#1F593A</color>
+    <color name="primary_light">#3DA06F</color>
     <color name="accent">#8BC34A</color>
     
     <color name="tab_text_color">#757575</color>
@@ -11,12 +11,12 @@
     
     <color name="fab_background">@color/purple_500</color>
     
-    <color name="text_primary">#212121</color>
-    <color name="text_secondary">#757575</color>
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#666666</color>
     <color name="divider">#BDBDBD</color>
     
-    <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
 
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -25,4 +25,11 @@
     <color name="teal_700">#FF018786</color>
 
     <color name="background_light">#FAFAFA</color>
+
+    <color name="card_brown">#D4B8A0</color>
+    <color name="card_blue">#A5C1D3</color>
+    <color name="card_sage">#C5CEBC</color>
+    <color name="card_green">#4A6B5D</color>
+
+    <color name="text_white">#FFFFFF</color>
 </resources>
