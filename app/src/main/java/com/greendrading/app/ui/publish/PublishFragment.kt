@@ -1,4 +1,4 @@
-package com.greendrading.app
+package com.greendrading.app.ui.publish
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.greendrading.app.ConsignmentActivity
+import com.greendrading.app.NormalSellActivity
+import com.greendrading.app.QuickSellActivity
+import com.greendrading.app.R
 import com.greendrading.app.databinding.FragmentPublishBinding
 
 class PublishFragment : Fragment() {
@@ -25,7 +30,7 @@ class PublishFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.cardShare.setOnClickListener {
-            startActivity(Intent(requireContext(), ShareGoodFindsActivity::class.java))
+            findNavController().navigate(R.id.action_publishFragment_to_shareGoodFindsFragment)
         }
 
         binding.cardQuickSell.setOnClickListener {

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.greendrading.app.HomeFragment"
+        android:label="首页" />
+
+    <fragment
+        android:id="@+id/navigation_shop"
+        android:name="com.greendrading.app.ShopFragment"
+        android:label="购物" />
+
+    <fragment
+        android:id="@+id/navigation_publish"
+        android:name="com.greendrading.app.ui.publish.PublishFragment"
+        android:label="发布">
+        <action
+            android:id="@+id/action_publishFragment_to_shareGoodFindsFragment"
+            app:destination="@id/shareGoodFindsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.greendrading.app.MessageFragment"
+        android:label="消息" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.greendrading.app.ProfileFragment"
+        android:label="我的" />
+
+    <fragment
+        android:id="@+id/shareGoodFindsFragment"
+        android:name="com.greendrading.app.ui.publish.ShareGoodFindsFragment"
+        android:label="晒好物" />
+
+</navigation> 
