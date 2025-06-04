@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_publishFragment_to_quickSellFragment"
             app:destination="@id/quickSellFragment" />
+        <action
+            android:id="@+id/action_publishFragment_to_consignmentFragment"
+            app:destination="@id/consignmentFragment" />
     </fragment>
 
     <fragment
@@ -45,5 +48,10 @@
         android:id="@+id/quickSellFragment"
         android:name="com.greendrading.app.ui.publish.QuickSellFragment"
         android:label="拍图自己卖" />
+
+    <fragment
+        android:id="@+id/consignmentFragment"
+        android:name="com.greendrading.app.ui.publish.ConsignmentFragment"
+        android:label="寄卖服务" />
 
 </navigation> 

@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.greendrading.app.ConsignmentActivity
 import com.greendrading.app.NormalSellActivity
 import com.greendrading.app.R
 import com.greendrading.app.databinding.FragmentPublishBinding
@@ -41,7 +40,7 @@ class PublishFragment : Fragment() {
         }
 
         binding.cardConsignment.setOnClickListener {
-            startActivity(Intent(requireContext(), ConsignmentActivity::class.java))
+            findNavController().navigate(R.id.action_publishFragment_to_consignmentFragment)
         }
     }
 

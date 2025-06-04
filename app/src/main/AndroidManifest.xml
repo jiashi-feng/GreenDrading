@@ -23,9 +23,6 @@
         <activity
             android:name="com.greendrading.app.NormalSellActivity"
             android:exported="false" />
-        <activity
-            android:name="com.greendrading.app.ConsignmentActivity"
-            android:exported="false" />
     </application>
 
 </manifest>
