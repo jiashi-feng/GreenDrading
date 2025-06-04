@@ -1,4 +1,4 @@
-package com.example.greendrading
+package com.greendrading.app
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.greendrading.databinding.FragmentPublishBinding
+import com.greendrading.app.databinding.FragmentPublishBinding
 
 class PublishFragment : Fragment() {
     private var _binding: FragmentPublishBinding? = null

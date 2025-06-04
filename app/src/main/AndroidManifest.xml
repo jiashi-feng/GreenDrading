@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GreenDrading"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name="com.greendrading.app.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,19 +21,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PublishActivity"
+            android:name="com.greendrading.app.PublishActivity"
             android:exported="false" />
         <activity
-            android:name=".ShareGoodFindsActivity"
+            android:name="com.greendrading.app.ShareGoodFindsActivity"
             android:exported="false" />
         <activity
-            android:name=".QuickSellActivity"
+            android:name="com.greendrading.app.QuickSellActivity"
             android:exported="false" />
         <activity
-            android:name=".NormalSellActivity"
+            android:name="com.greendrading.app.NormalSellActivity"
             android:exported="false" />
         <activity
-            android:name=".ConsignmentActivity"
+            android:name="com.greendrading.app.ConsignmentActivity"
             android:exported="false" />
     </application>
 

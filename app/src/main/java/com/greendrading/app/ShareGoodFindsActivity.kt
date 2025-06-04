@@ -1,11 +1,11 @@
-package com.example.greendrading
+package com.greendrading.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class ConsignmentActivity : AppCompatActivity() {
+class ShareGoodFindsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_consignment)
+        setContentView(R.layout.activity_share_good_finds)
     }
 } 
