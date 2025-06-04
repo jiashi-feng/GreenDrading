@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_publishFragment_to_shareGoodFindsFragment"
             app:destination="@id/shareGoodFindsFragment" />
+        <action
+            android:id="@+id/action_publishFragment_to_quickSellFragment"
+            app:destination="@id/quickSellFragment" />
     </fragment>
 
     <fragment
@@ -37,5 +40,10 @@
         android:id="@+id/shareGoodFindsFragment"
         android:name="com.greendrading.app.ui.publish.ShareGoodFindsFragment"
         android:label="晒好物" />
+
+    <fragment
+        android:id="@+id/quickSellFragment"
+        android:name="com.greendrading.app.ui.publish.QuickSellFragment"
+        android:label="拍图自己卖" />
 
 </navigation> 

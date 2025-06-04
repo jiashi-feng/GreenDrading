@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.greendrading.app.ConsignmentActivity
 import com.greendrading.app.NormalSellActivity
-import com.greendrading.app.QuickSellActivity
 import com.greendrading.app.R
 import com.greendrading.app.databinding.FragmentPublishBinding
 
@@ -34,7 +33,7 @@ class PublishFragment : Fragment() {
         }
 
         binding.cardQuickSell.setOnClickListener {
-            startActivity(Intent(requireContext(), QuickSellActivity::class.java))
+            findNavController().navigate(R.id.action_publishFragment_to_quickSellFragment)
         }
 
         binding.cardNormalSell.setOnClickListener {
