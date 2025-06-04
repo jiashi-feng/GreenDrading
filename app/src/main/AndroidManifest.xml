@@ -21,15 +21,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.greendrading.app.PublishActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.greendrading.app.ShareGoodFindsActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.greendrading.app.QuickSellActivity"
-            android:exported="false" />
-        <activity
             android:name="com.greendrading.app.NormalSellActivity"
             android:exported="false" />
         <activity
