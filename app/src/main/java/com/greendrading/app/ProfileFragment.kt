@@ -1,4 +1,4 @@
-package com.example.greendrading
+package com.greendrading.app
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -8,29 +8,33 @@
 app/
 ├── src/
 │   └── main/
-│       ├── java/com/example/greendrading/
+│       ├── java/com/greendrading/app/
 │       │   ├── MainActivity.kt              # 主活动
-│       │   ├── fragments/                   # Fragment组件
-│       │   │   ├── HomeFragment.kt         # 首页
-│       │   │   ├── ShopFragment.kt         # 购物
-│       │   │   ├── PublishFragment.kt      # 发布
-│       │   │   ├── MessageFragment.kt      # 消息
-│       │   │   └── ProfileFragment.kt      # 个人中心
-│       │   └── activities/                  # Activity组件
-│       │       ├── ShareGoodFindsActivity.kt  # 晒好物
-│       │       ├── QuickSellActivity.kt     # 快速出售
-│       │       ├── NormalSellActivity.kt    # 普通挂售
-│       │       └── ConsignmentActivity.kt   # 寄卖服务
+│       │   ├── HomeFragment.kt             # 首页
+│       │   ├── ShopFragment.kt            # 购物
+│       │   ├── PublishFragment.kt         # 发布
+│       │   ├── MessageFragment.kt         # 消息
+│       │   ├── ProfileFragment.kt         # 个人中心
+│       │   ├── ShareGoodFindsActivity.kt  # 晒好物
+│       │   ├── QuickSellActivity.kt      # 快速出售
+│       │   ├── NormalSellActivity.kt     # 普通挂售
+│       │   └── ConsignmentActivity.kt    # 寄卖服务
 │       └── res/
-│           ├── layout/                      # 布局文件
-│           ├── drawable/                    # 图标资源
-│           ├── values/                      # 资源文件
-│           └── menu/                        # 菜单文件
+│           ├── layout/                    # 布局文件
+│           ├── drawable/                  # 图标资源
+│           ├── values/                    # 资源文件
+│           └── menu/                      # 菜单文件
 ```
 
 ## 版本历史
 
-### v1.0.0 (2024-03-xx)
+### v1.0.1 (2024-03-06)
+- 更新包名为 com.greendrading.app
+- 更新 Java 版本至 17
+- 优化项目结构
+- 修复包名相关的构建问题
+
+### v1.0.0 (2024-03-05)
 - 初始版本
 - 实现底部导航栏，包含：首页、购物、发布、消息、我的五个主要功能
 - 实现发布模块的四个子功能：晒好物、快速出售、普通挂售、寄卖服务
@@ -40,21 +44,22 @@ app/
 - 添加基础布局和图标资源
 
 ### 技术栈
-- Kotlin 1.9.x
+- Kotlin 1.9.22
 - Android SDK 34
 - AndroidX
-- Material Design Components
+- Material Design Components 1.11.0
 - ViewBinding
-- Navigation Component
-- ViewModel & LiveData
-- Coroutines
-- Glide
+- Navigation Component 2.7.7
+- ViewModel & LiveData 2.7.0
+- Coroutines 1.7.3
+- Glide 4.16.0
 
 ### 环境要求
 - Android Studio Hedgehog | 2023.1.1
 - JDK 17
-- Gradle 8.2
+- Gradle 8.2.2
 - 最低支持Android API 26 (Android 8.0)
+- 目标Android API 34 (Android 14)
 
 ## 开发指南
 

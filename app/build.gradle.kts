@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.greendrading"
+    namespace = "com.greendrading.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.greendrading"
+        applicationId = "com.greendrading.app"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
@@ -34,12 +34,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 

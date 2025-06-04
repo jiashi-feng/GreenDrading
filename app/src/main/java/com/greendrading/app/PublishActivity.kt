@@ -1,4 +1,4 @@
-package com.example.greendrading
+package com.greendrading.app
 
 import android.content.Intent
 import android.os.Bundle
