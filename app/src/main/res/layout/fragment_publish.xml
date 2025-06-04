@@ -112,7 +112,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/ic_plant_decoration" />
+                    android:src="@drawable/round_plant_1" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -160,7 +160,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/ic_plant_decoration" />
+                    android:src="@drawable/round_plant_2" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -208,7 +208,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/ic_plant_decoration" />
+                    android:src="@drawable/round_plant_3" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -255,7 +255,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@drawable/ic_plant_decoration" />
+                    android:src="@drawable/round_plant_4" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
