@@ -1,13 +1,11 @@
 package com.greendrading.app.ui.publish
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.greendrading.app.NormalSellActivity
 import com.greendrading.app.R
 import com.greendrading.app.databinding.FragmentPublishBinding
 
@@ -36,7 +34,7 @@ class PublishFragment : Fragment() {
         }
 
         binding.cardNormalSell.setOnClickListener {
-            startActivity(Intent(requireContext(), NormalSellActivity::class.java))
+            findNavController().navigate(R.id.action_publishFragment_to_listingFragment)
         }
 
         binding.cardConsignment.setOnClickListener {

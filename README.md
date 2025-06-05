@@ -9,24 +9,36 @@ app/
 ├── src/
 │   └── main/
 │       ├── java/com/greendrading/app/
-│       │   ├── MainActivity.kt              # 主活动
-│       │   ├── HomeFragment.kt             # 首页
-│       │   ├── ShopFragment.kt            # 购物
-│       │   ├── PublishFragment.kt         # 发布
-│       │   ├── MessageFragment.kt         # 消息
-│       │   ├── ProfileFragment.kt         # 个人中心
-│       │   ├── ShareGoodFindsActivity.kt  # 晒好物
-│       │   ├── QuickSellActivity.kt      # 快速出售
-│       │   ├── NormalSellActivity.kt     # 普通挂售
-│       │   └── ConsignmentActivity.kt    # 寄卖服务
+│       │   ├── MainActivity.kt                    # 主活动
+│       │   ├── ui/
+│       │   │   ├── home/                         # 首页模块
+│       │   │   ├── shop/                         # 购物模块
+│       │   │   ├── publish/                      # 发布模块
+│       │   │   │   ├── PublishFragment.kt       # 发布主页
+│       │   │   │   ├── ShareGoodFindsFragment.kt # 晒好物
+│       │   │   │   ├── QuickSellFragment.kt     # 快速出售
+│       │   │   │   ├── ListingFragment.kt       # 自主保管
+│       │   │   │   └── ConsignmentFragment.kt   # 寄卖服务
+│       │   │   ├── message/                      # 消息模块
+│       │   │   └── profile/                      # 个人中心模块
+│       │   └── data/                             # 数据层
 │       └── res/
-│           ├── layout/                    # 布局文件
-│           ├── drawable/                  # 图标资源
-│           ├── values/                    # 资源文件
-│           └── menu/                      # 菜单文件
+│           ├── layout/                           # 布局文件
+│           ├── drawable/                         # 图标资源
+│           ├── navigation/                       # 导航配置
+│           ├── values/                           # 资源文件
+│           └── menu/                             # 菜单文件
 ```
 
 ## 版本历史
+
+### v1.0.2 (2024-03-07)
+- 重构发布模块，采用纯Fragment架构
+- 将普通挂售功能重命名为"自主保管"
+- 优化UI交互，添加返回按钮
+- 统一按钮样式
+- 修复资源文件命名规范
+- 添加矢量图标资源
 
 ### v1.0.1 (2024-03-06)
 - 更新包名为 com.greendrading.app
@@ -79,6 +91,8 @@ app/
 - Fragment通信使用ViewModel和LiveData
 - 异步操作使用Coroutines
 - 图片加载使用Glide
+- 资源文件命名使用小写字母和下划线
+- 使用矢量图标（Vector Drawable）代替位图
 
 ## 待办事项
 - [ ] 实现用户认证系统
@@ -89,6 +103,8 @@ app/
 - [ ] 添加用户评价系统
 - [ ] 优化UI/UX设计
 - [ ] 添加单元测试和UI测试
+- [ ] 优化Fragment间的导航
+- [ ] 实现深色主题支持
 
 ## 贡献指南
 1. Fork项目
