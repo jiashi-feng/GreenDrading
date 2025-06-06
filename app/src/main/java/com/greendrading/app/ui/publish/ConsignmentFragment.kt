@@ -18,20 +18,45 @@ class ConsignmentFragment : Fragment() {
     private lateinit var btnBack: ImageButton
     private lateinit var categoryChips: ChipGroup
     private lateinit var plantsGrid: RecyclerView
+    private lateinit var plantsAdapter: PlantsAdapter
 
-    private val plantImages = listOf(
-        R.drawable.sell_plant_1,
-        R.drawable.sell_plant_2,
-        R.drawable.sell_plant_3,
-        R.drawable.sell_plant_4,
-        R.drawable.sell_plant_5,
-        R.drawable.sell_plant_6,
-        R.drawable.sell_plant_7,
-        R.drawable.sell_plant_8,
-        R.drawable.sell_plant_9,
-        R.drawable.sell_plant_10,
-        R.drawable.sell_plant_11
+    // 定义植物数据类
+    data class Plant(
+        val imageRes: Int,
+        val name: String,
+        val category: PlantCategory
     )
+
+    // 定义植物分类枚举
+    enum class PlantCategory {
+        ALL,
+        ORNAMENTAL,
+        EDIBLE,
+        AQUATIC,
+        AROMATIC,
+        MEDICINAL,
+        INDUSTRIAL,
+        HYDROPONIC
+    }
+
+    // 模拟植物数据
+    private val allPlants = listOf(
+        Plant(R.drawable.sell_plant_1, "龟背竹", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.sell_plant_5, "玫瑰", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.sell_plant_7, "郁金香", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.sell_plant_4, "仙人掌", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.sell_plant_8, "竹子", PlantCategory.INDUSTRIAL),
+        Plant(R.drawable.sell_plant_9, "百合", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.sell_plant_6, "松树", PlantCategory.INDUSTRIAL),
+        Plant(R.drawable.sell_plant_2, "龟背竹", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.sell_plant_3, "龟背竹", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.sell_plant_11, "苹果树", PlantCategory.EDIBLE),
+        Plant(R.drawable.sell_plant_10, "多肉", PlantCategory.ORNAMENTAL),
+        Plant(R.drawable.round_plant_4, "水果树", PlantCategory.AQUATIC ),
+         Plant(R.drawable.ic_plant_1, "香草花", PlantCategory.AROMATIC )
+    )
+
+    private var currentPlants = allPlants
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -60,29 +85,58 @@ class ConsignmentFragment : Fragment() {
             findNavController().navigateUp()
         }
 
-        categoryChips.setOnCheckedChangeListener { group, checkedId ->
-            when (checkedId) {
-                R.id.chip_search -> showToast("分类检索")
-                R.id.chip_ornamental -> showToast("观赏植物")
-                R.id.chip_edible -> showToast("食用植物")
-                R.id.chip_aquatic -> showToast("水果植物")
-                R.id.chip_aromatic -> showToast("香草植物")
-                R.id.chip_medicinal -> showToast("药用植物")
-                R.id.chip_industrial -> showToast("工业植物")
-                R.id.chip_hydroponic -> showToast("水培植物")
+        categoryChips.setOnCheckedChangeListener { _, checkedId ->
+            val filteredPlants = when (checkedId) {
+                R.id.chip_search -> allPlants
+                R.id.chip_ornamental -> allPlants.filter { it.category == PlantCategory.ORNAMENTAL }
+                R.id.chip_edible -> allPlants.filter { it.category == PlantCategory.EDIBLE }
+                R.id.chip_aquatic -> allPlants.filter { it.category == PlantCategory.AQUATIC }
+                R.id.chip_aromatic -> allPlants.filter { it.category == PlantCategory.AROMATIC }
+                R.id.chip_medicinal -> allPlants.filter { it.category == PlantCategory.MEDICINAL }
+                R.id.chip_industrial -> allPlants.filter { it.category == PlantCategory.INDUSTRIAL }
+                R.id.chip_hydroponic -> allPlants.filter { it.category == PlantCategory.HYDROPONIC }
+                else -> allPlants
             }
+            currentPlants = filteredPlants
+            plantsAdapter.updatePlants(filteredPlants)
         }
     }
 
     private fun setupPlantsGrid() {
         plantsGrid.layoutManager = GridLayoutManager(requireContext(), 2)
-        val adapter = PlantGridAdapter(plantImages) { position ->
-            showToast("选择了第${position + 1}个植物")
-        }
-        plantsGrid.adapter = adapter
+        plantsAdapter = PlantsAdapter(currentPlants)
+        plantsGrid.adapter = plantsAdapter
     }
 
     private fun showToast(message: String) {
         Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
+    }
+}
+
+// 适配器类
+class PlantsAdapter(
+    private var plants: List<ConsignmentFragment.Plant>
+) : RecyclerView.Adapter<PlantsAdapter.PlantViewHolder>() {
+
+    class PlantViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val imageView: androidx.appcompat.widget.AppCompatImageView = itemView.findViewById(R.id.plant_image)
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlantViewHolder {
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_plant_grid, parent, false)
+        return PlantViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: PlantViewHolder, position: Int) {
+        val plant = plants[position]
+        holder.imageView.setImageResource(plant.imageRes)
+    }
+
+    override fun getItemCount() = plants.size
+
+    fun updatePlants(newPlants: List<ConsignmentFragment.Plant>) {
+        plants = newPlants
+        notifyDataSetChanged()
     }
 } 
