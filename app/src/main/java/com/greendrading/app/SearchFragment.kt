@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 
 class SearchFragment : Fragment() {
 
@@ -19,5 +20,12 @@ class SearchFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // 初始化搜索页面的逻辑
+        val binding = com.greendrading.app.databinding.FragmentSearchBinding.bind(view)
+        binding.btnSearch.setOnClickListener {
+            findNavController().navigate(R.id.shoppingListFragment)
+        }
+        binding.btnCancel.setOnClickListener {
+            findNavController().navigate(R.id.navigation_home)
+        }
     }
 } 

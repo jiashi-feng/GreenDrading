@@ -79,4 +79,9 @@
         android:name="com.greendrading.app.HomeCategoryFragment"
         android:label="分类" />
 
+    <fragment
+        android:id="@+id/shoppingListFragment"
+        android:name="com.greendrading.app.ShoppingListFragment"
+        android:label="商品页" />
+
 </navigation> 
