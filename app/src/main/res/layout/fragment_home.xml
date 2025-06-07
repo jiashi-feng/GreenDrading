@@ -1,12 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#F8FFF8">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="首页" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout> 
+        <!-- 搜索栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#E6F6E6"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="8dp"
+            android:radius="24dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:tint="#4CAF50"
+                android:layout_marginEnd="8dp"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="搜索"
+                android:textSize="16sp"
+                android:padding="0dp"/>
+        </LinearLayout>
+
+        <!-- 轮播图（静态模拟） -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sell_plant_10"/>
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/sell_plant_11"/>
+        </LinearLayout>
+
+        <!-- 三个按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="推荐"
+                android:backgroundTint="#C8F7C5"
+                android:textColor="#333"
+                android:layout_marginEnd="8dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="养护技巧"
+                android:backgroundTint="#C8F7C5"
+                android:textColor="#333"
+                android:layout_marginEnd="8dp"/>
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="更多分类"
+                android:backgroundTint="#C8F7C5"
+                android:textColor="#333"/>
+        </LinearLayout>
+
+        <!-- 商品列表（静态模拟4个） -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- 商品项1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:radius="16dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/sell_plant_10"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/darker_gray"
+                    android:radius="12dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="芦荟"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品定价：20元\n市场价：19元\n商品定位：易养护植物"
+                        android:textSize="14sp"
+                        android:textColor="#666"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 商品项2（可复制上面结构，换图片和内容） -->
+            <!-- ... 你可以继续复制上面商品项结构，换图片和内容 ... -->
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView> 
