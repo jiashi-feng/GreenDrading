@@ -11,6 +11,9 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+    android:id="@+id/action_homeFragment_to_homeCategoryFragment"
+    app:destination="@id/homeCategoryFragment" />
     </fragment>
 
     <fragment
@@ -70,5 +73,10 @@
         android:id="@+id/searchFragment"
         android:name="com.greendrading.app.SearchFragment"
         android:label="搜索" />
+
+    <fragment
+        android:id="@+id/homeCategoryFragment"
+        android:name="com.greendrading.app.HomeCategoryFragment"
+        android:label="分类" />
 
 </navigation> 

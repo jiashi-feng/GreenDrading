@@ -23,5 +23,9 @@ class HomeFragment : Fragment() {
         view.findViewById<View>(R.id.searchButton).setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
         }
+
+        view.findViewById<View>(R.id.btnMoreCategory).setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_homeCategoryFragment)
+        }
     }
 } 
