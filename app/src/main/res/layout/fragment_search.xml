@@ -8,31 +8,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="12dp">
 
         <!-- 顶部搜索栏 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:background="#C8F7C5"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:paddingStart="12dp"
-            android:paddingEnd="12dp"
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="8dp"
-            android:elevation="2dp"
-            android:clipToOutline="true"
-            android:backgroundTint="#C8F7C5"
-            android:layout_gravity="center"
-            android:radius="20dp">
+            android:background="@drawable/bg_search_bar"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp">
 
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_menu_search"
                 android:tint="#333"
-                android:layout_marginEnd="8dp"/>
+                android:layout_marginEnd="4dp"/>
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -42,13 +37,25 @@
                 android:textSize="15sp"
                 android:padding="0dp"/>
             <TextView
+                android:id="@+id/btnSearch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="确认"
+                android:text="搜索"
                 android:textColor="#388E3C"
                 android:textSize="15sp"
-                android:paddingStart="12dp"
-                android:paddingEnd="4dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+            <TextView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="取消"
+                android:textColor="#888"
+                android:textSize="15sp"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
                 android:clickable="true"
                 android:focusable="true"/>
         </LinearLayout>
@@ -60,7 +67,8 @@
             android:text="热门搜索"
             android:textColor="#888"
             android:textSize="14sp"
-            android:layout_marginBottom="12dp"/>
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"/>
 
         <!-- 热门搜索词 -->
         <GridLayout
