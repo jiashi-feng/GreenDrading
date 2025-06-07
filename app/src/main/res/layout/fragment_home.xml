@@ -10,32 +10,40 @@
         android:orientation="vertical"
         android:padding="12dp">
 
-        <!-- 搜索栏 -->
+        <!-- 搜索按钮 -->
         <LinearLayout
+            android:id="@+id/searchButton"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="#E6F6E6"
+            android:layout_height="40dp"
+            android:background="#C8F7C5"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:padding="8dp"
-            android:layout_marginBottom="12dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="24dp"
             android:layout_marginTop="8dp"
-            android:radius="24dp">
+            android:elevation="2dp"
+            android:clipToOutline="true"
+            android:backgroundTint="#C8F7C5"
+            android:layout_gravity="center"
+            android:radius="20dp"
+            android:clickable="true"
+            android:focusable="true">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
                 android:src="@android:drawable/ic_menu_search"
-                android:tint="#4CAF50"
+                android:tint="#333"
                 android:layout_marginEnd="8dp"/>
-            <EditText
+            <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:hint="搜索"
-                android:textSize="16sp"
-                android:padding="0dp"/>
+                android:gravity="center_vertical"
+                android:text="搜索"
+                android:textColor="#333"
+                android:textSize="15sp"/>
         </LinearLayout>
 
         <!-- 轮播图（静态模拟） -->
@@ -149,4 +157,4 @@
 
         </LinearLayout>
     </LinearLayout>
-</ScrollView> 
+</ScrollView>

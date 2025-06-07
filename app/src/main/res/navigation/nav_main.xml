@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.greendrading.app.HomeFragment"
-        android:label="首页" />
+        android:label="首页">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_shop"
@@ -61,5 +65,10 @@
         android:id="@+id/listingFragment"
         android:name="com.greendrading.app.ui.publish.ListingFragment"
         android:label="自主保管" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.greendrading.app.SearchFragment"
+        android:label="搜索" />
 
 </navigation> 
