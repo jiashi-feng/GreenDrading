@@ -22,5 +22,6 @@ class ShoppingListFragment : Fragment() {
         view.findViewById<TextView>(R.id.tvBack).setOnClickListener {
             findNavController().navigate(R.id.navigation_home)
         }
+        
     }
 }
