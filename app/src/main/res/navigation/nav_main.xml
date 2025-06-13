@@ -94,6 +94,14 @@
         <argument
             android:name="productId"
             app:argType="string" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_confirmPaymentFragment"
+            app:destination="@id/confirmPaymentFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/confirmPaymentFragment"
+        android:name="com.greendrading.app.ConfirmPaymentFragment"
+        android:label="确认支付" />
 
 </navigation> 

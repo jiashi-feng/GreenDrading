@@ -115,7 +115,7 @@
             <LinearLayout
                 android:id="@+id/item1"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:background="@android:color/white"
                 android:layout_marginBottom="8dp"
@@ -153,10 +153,129 @@
                         android:textColor="#666"/>
                 </LinearLayout>
             </LinearLayout>
+<LinearLayout
+                android:id="@+id/item2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:radius="16dp">
 
-            <!-- 商品项2（可复制上面结构，换图片和内容） -->
-            <!-- ... 你可以继续复制上面商品项结构，换图片和内容 ... -->
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/sell_plant_10"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/darker_gray"
+                    android:radius="12dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="芦荟"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品定价：20元\n市场价：19元\n商品定位：易养护植物"
+                        android:textSize="14sp"
+                        android:textColor="#666"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:radius="16dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/sell_plant_10"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/darker_gray"
+                    android:radius="12dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="芦荟"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品定价：20元\n市场价：19元\n商品定位：易养护植物"
+                        android:textSize="14sp"
+                        android:textColor="#666"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item4"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@android:color/white"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:radius="16dp">
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/sell_plant_10"
+                    android:scaleType="centerCrop"
+                    android:layout_marginEnd="12dp"
+                    android:background="@android:color/darker_gray"
+                    android:radius="12dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="芦荟"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#222"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商品定价：20元\n市场价：19元\n商品定位：易养护植物"
+                        android:textSize="14sp"
+                        android:textColor="#666"/>
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

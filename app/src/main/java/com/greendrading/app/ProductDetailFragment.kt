@@ -51,6 +51,10 @@ class ProductDetailFragment : Fragment() {
             // 跳转到首页
             findNavController().navigate(R.id.navigation_home)
         }
+
+        binding.buyButton.setOnClickListener {
+            findNavController().navigate(R.id.action_productDetailFragment_to_confirmPaymentFragment)
+        }
     }
 
     override fun onDestroyView() {
