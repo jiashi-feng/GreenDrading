@@ -37,6 +37,11 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_homeCategoryFragment)
         }
 
+        // 设置养护技巧按钮点击事件
+        binding.btnCareTips.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_careTipsFragment)
+        }
+
         // 设置商品项点击事件
         binding.item1.setOnClickListener {
             // 这里使用示例商品ID，实际应用中应该使用真实的商品ID

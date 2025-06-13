@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailFragment"
             app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_careTipsFragment"
+            app:destination="@id/careTipsFragment" />
     </fragment>
 
     <fragment
@@ -103,5 +106,32 @@
         android:id="@+id/confirmPaymentFragment"
         android:name="com.greendrading.app.ConfirmPaymentFragment"
         android:label="确认支付" />
+
+    <fragment
+        android:id="@+id/careTipsFragment"
+        android:name="com.greendrading.plant.care.CareTipsFragment"
+        android:label="养护技巧" >
+        <action
+            android:id="@+id/action_careTipsFragment_to_careDetailFragment"
+            app:destination="@id/careDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/careDetailFragment"
+        android:name="com.greendrading.plant.care.CareDetailFragment"
+        android:label="养护详情" >
+        <argument
+            android:name="careTitle"
+            app:argType="string" />
+        <argument
+            android:name="careImage"
+            app:argType="integer" />
+        <argument
+            android:name="careTips"
+            app:argType="string" />
+        <argument
+            android:name="careTools"
+            app:argType="string" />
+    </fragment>
 
 </navigation> 
