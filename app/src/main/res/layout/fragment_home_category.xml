@@ -20,7 +20,8 @@
             android:text="返回"
             android:background="@android:color/transparent"
             android:textColor="@android:color/black"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:layout_marginStart="-24dp" />
 
         <TextView
             android:id="@+id/categoryBanner"
@@ -31,7 +32,8 @@
             android:text="分类"
             android:textColor="@android:color/black"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginStart="-20dp" />
     </LinearLayout>
 
     <!-- 原有的横向LinearLayout（包含左侧一级分类和右侧二级分类/商品） -->
@@ -52,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_horizontal|bottom"
-                android:paddingStart="16dp"
+                android:paddingStart="-20dp"
                 android:text="观赏植物"
                 android:textColor="#888"
                 android:background="#FFFFFF"
@@ -66,7 +68,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_horizontal|bottom"
-                android:paddingStart="16dp"
+                android:paddingStart="-20dp"
                 android:text="食用植物"
                 android:textColor="#333"
                 android:background="#F8F8F8"
@@ -80,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_horizontal|bottom"
-                android:paddingStart="16dp"
+                android:paddingStart="-20dp"
                 android:text="药用植物"
                 android:textColor="#333"
                 android:background="#F8F8F8"
@@ -94,7 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_horizontal|bottom"
-                android:paddingStart="16dp"
+                android:paddingStart="-20dp"
                 android:text="经济作物"
                 android:textColor="#333"
                 android:background="#F8F8F8"
@@ -108,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_horizontal|bottom"
-                android:paddingStart="16dp"
+                android:paddingStart="-20dp"
                 android:text="生态修复植物"
                 android:textColor="#333"
                 android:background="#F8F8F8"
@@ -122,7 +124,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_horizontal|bottom"
-                android:paddingStart="16dp"
+                android:paddingStart="-20dp"
                 android:text="宗教/文化植物"
                 android:textColor="#333"
                 android:background="#F8F8F8"
@@ -136,7 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:gravity="center_horizontal|bottom"
-                android:paddingStart="16dp"
+                android:paddingStart="-20dp"
                 android:text="种植养护工具"
                 android:textColor="#333"
                 android:background="#F8F8F8"
