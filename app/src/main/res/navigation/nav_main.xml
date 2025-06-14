@@ -88,7 +88,11 @@
     <fragment
         android:id="@+id/shoppingListFragment"
         android:name="com.greendrading.app.ShoppingListFragment"
-        android:label="商品页" />
+        android:label="商品页">
+        <action
+            android:id="@+id/action_shoppingListFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/productDetailFragment"

@@ -56,7 +56,7 @@
             <LinearLayout
                 android:id="@+id/item1"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
+                android:layout_height="95dp"
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:paddingBottom="8dp">
@@ -93,6 +93,7 @@
 
             <!-- 商品项2 -->
             <LinearLayout
+                android:id="@+id/item2"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:orientation="horizontal"
@@ -131,6 +132,7 @@
 
             <!-- 商品项3 -->
             <LinearLayout
+                android:id="@+id/item3"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:orientation="horizontal"
@@ -169,6 +171,7 @@
 
             <!-- 商品项4 -->
             <LinearLayout
+                android:id="@+id/item4"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:orientation="horizontal"
@@ -207,6 +210,7 @@
 
             <!-- 商品项5 -->
             <LinearLayout
+                android:id="@+id/item5"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:orientation="horizontal"
@@ -245,6 +249,7 @@
 
             <!-- 商品项6 -->
             <LinearLayout
+                android:id="@+id/item6"
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
                 android:orientation="horizontal"
