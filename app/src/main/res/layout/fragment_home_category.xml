@@ -44,7 +44,7 @@
 
         <!-- 左侧一级分类 -->
         <LinearLayout
-            android:layout_width="140dp"
+            android:layout_width="120dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="#F8F8F8">
@@ -60,7 +60,7 @@
                 android:background="#FFFFFF"
                 android:clickable="true"
                 android:focusable="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
             <TextView
@@ -74,7 +74,7 @@
                 android:background="#F8F8F8"
                 android:clickable="true"
                 android:focusable="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
             <TextView
@@ -88,7 +88,7 @@
                 android:background="#F8F8F8"
                 android:clickable="true"
                 android:focusable="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
             <TextView
@@ -102,7 +102,7 @@
                 android:background="#F8F8F8"
                 android:clickable="true"
                 android:focusable="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
             <TextView
@@ -116,7 +116,7 @@
                 android:background="#F8F8F8"
                 android:clickable="true"
                 android:focusable="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
             <TextView
@@ -130,7 +130,7 @@
                 android:background="#F8F8F8"
                 android:clickable="true"
                 android:focusable="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
             <TextView
@@ -144,7 +144,7 @@
                 android:background="#F8F8F8"
                 android:clickable="true"
                 android:focusable="true"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
         </LinearLayout>
@@ -1459,14 +1459,201 @@
                         android:textStyle="bold"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="4dp"/>
+
+                    <!-- 基础工具 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="工具：
-花盆、土壤、肥料、园艺剪、洒水壶、喷雾瓶、手套、除草工具、修剪工具、嫁接工具等"
+                        android:text="基础工具"
                         android:textColor="#666"
                         android:textSize="14sp"
-                        android:lineSpacingExtra="4dp"/>
+                        android:layout_marginTop="8dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/huapen"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="花盆"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/soil"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="土壤"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/feiliao"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="肥料"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 日常养护 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="日常养护"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/yuanyijian"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="园艺剪"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/sashuihu"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="洒水壶"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/penwuping"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="喷雾瓶"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- 辅助工具 -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="辅助工具"
+                        android:textColor="#666"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/shoutao"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="手套"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center_horizontal">
+                            <ImageView
+                                android:layout_width="56dp"
+                                android:layout_height="56dp"
+                                android:src="@drawable/jiajietaozhuang"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="嫁接工具"
+                                android:textColor="#333"
+                                android:textSize="13sp"
+                                android:gravity="center"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" android:layout_weight="1"/>
+                    </LinearLayout>
                 </LinearLayout>
 
             </LinearLayout>
