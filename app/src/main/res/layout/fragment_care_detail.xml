@@ -26,7 +26,7 @@
 
         <TextView
             android:id="@+id/careDetailBannerTitle"
-            android:layout_width="0dp"
+            android:layout_width="-20dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_vertical|center"
@@ -65,15 +65,30 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:id="@+id/careTipsContent"
+            <LinearLayout
+                android:id="@+id/careTipsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="这里是具体的养护技巧内容，例如浇水、施肥、光照、温度等。" 
-                android:textColor="#666"
-                android:textSize="16sp"
-                android:lineSpacingExtra="4dp"
-                android:layout_marginBottom="16dp"/>
+                android:orientation="vertical"
+                android:background="@drawable/edit_text_border"
+                android:padding="12dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/careTipsContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击查看养护技巧详情"
+                    android:textColor="#666"
+                    android:textSize="16sp"
+                    android:ellipsize="none"
+                    android:maxLines="1000"
+                    android:scrollbars="vertical"/>
+
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/toolsTitle"
@@ -104,25 +119,6 @@
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
-
-            <!-- 评论输入框 -->
-            <EditText
-                android:id="@+id/commentInput"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="发表你的评论..."
-                android:background="@drawable/edit_text_border"
-                android:padding="12dp"
-                android:minLines="3"
-                android:gravity="top"
-                android:layout_marginBottom="12dp"/>
-
-            <Button
-                android:id="@+id/submitCommentButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="提交评论"
-                android:layout_gravity="end"/>
 
             <!-- 评论列表 -->
             <LinearLayout
@@ -180,6 +176,26 @@
                 </LinearLayout>
 
             </LinearLayout>
+
+            <!-- 评论输入框 -->
+            <EditText
+                android:id="@+id/commentInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="发表你的评论..."
+                android:background="@drawable/edit_text_border"
+                android:padding="12dp"
+                android:minLines="3"
+                android:gravity="top"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/submitCommentButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提交评论"
+                android:layout_gravity="end"/>
 
         </LinearLayout>
     </ScrollView>

@@ -43,9 +43,9 @@ class ShoppingListFragment : Fragment() {
         // Set click listener for each product item
         productItems.forEachIndexed { index, item ->
             item.setOnClickListener {
-                // Navigate to product detail page with product ID
+                // Navigate to product detail page with a generic product ID
                 val action = ShoppingListFragmentDirections.actionShoppingListFragmentToProductDetailFragment(
-                    productId = "product_${index + 1}"
+                    productId = "succulent_product_details" // Using a generic ID
                 )
                 findNavController().navigate(action)
             }

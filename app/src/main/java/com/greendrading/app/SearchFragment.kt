@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 
@@ -26,6 +27,16 @@ class SearchFragment : Fragment() {
         }
         binding.btnCancel.setOnClickListener {
             findNavController().navigate(R.id.navigation_home)
+        }
+
+        // Set up click listener for "多肉" TextView
+        view.findViewById<TextView>(R.id.tvDuoRou).setOnClickListener {
+            findNavController().navigate(R.id.shoppingListFragment)
+        }
+
+        // Set up cancel button click listener
+        view.findViewById<TextView>(R.id.btnCancel).setOnClickListener {
+            findNavController().navigateUp()
         }
     }
 } 
