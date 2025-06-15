@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    序言性注释：
+    文件名：fragment_care_detail.xml
+    用途：植物养护详情页面的布局文件，展示植物的养护技巧和相关信息
+    主要组件：
+    - 顶部导航栏：包含返回按钮和页面标题
+    - 植物图片展示区：显示植物图片
+    - 养护技巧区：展示详细的养护方法
+    - 所需工具区：列出养护所需的工具
+    - 评论区：展示用户评论和评论输入功能
+    布局结构：使用LinearLayout作为根布局，内部使用ScrollView支持内容滚动
+    创建时间：2024
+    修改记录：
+    - 初始版本：实现基本的养护详情页面布局
+-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- 横幅 -->
+    <!-- 顶部导航栏：包含返回按钮和页面标题 -->
     <LinearLayout
         android:id="@+id/bannerLayout"
         android:layout_width="match_parent"
@@ -13,6 +29,7 @@
         android:background="@android:color/white"
         android:gravity="center_vertical">
 
+        <!-- 返回按钮：点击返回上一页面 -->
         <Button
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
@@ -24,6 +41,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"/>
 
+        <!-- 页面标题：显示当前页面名称 -->
         <TextView
             android:id="@+id/careDetailBannerTitle"
             android:layout_width="-20dp"
@@ -36,17 +54,19 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- 养护详情内容 -->
+    <!-- 养护详情内容：使用ScrollView支持内容滚动 -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- 内容容器：使用LinearLayout垂直排列各个组件 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- 植物图片：展示植物的外观 -->
             <ImageView
                 android:id="@+id/plantImage"
                 android:layout_width="match_parent"
@@ -55,6 +75,7 @@
                 android:src="@drawable/sell_plant_10"
                 android:layout_marginBottom="16dp"/>
 
+            <!-- 养护技巧标题 -->
             <TextView
                 android:id="@+id/careTipsTitle"
                 android:layout_width="wrap_content"
@@ -65,6 +86,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
 
+            <!-- 养护技巧内容容器：可点击展开查看详情 -->
             <LinearLayout
                 android:id="@+id/careTipsContainer"
                 android:layout_width="match_parent"
@@ -77,6 +99,7 @@
                 android:foreground="?android:attr/selectableItemBackground"
                 android:layout_marginBottom="16dp">
 
+                <!-- 养护技巧详细内容 -->
                 <TextView
                     android:id="@+id/careTipsContent"
                     android:layout_width="match_parent"
@@ -90,6 +113,7 @@
 
             </LinearLayout>
 
+            <!-- 所需工具标题 -->
             <TextView
                 android:id="@+id/toolsTitle"
                 android:layout_width="wrap_content"
@@ -100,6 +124,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
 
+            <!-- 所需工具内容：列出养护所需的工具清单 -->
             <TextView
                 android:id="@+id/toolsContent"
                 android:layout_width="match_parent"
@@ -110,6 +135,7 @@
                 android:lineSpacingExtra="4dp"
                 android:layout_marginBottom="24dp"/>
 
+            <!-- 评论区标题 -->
             <TextView
                 android:id="@+id/commentsTitle"
                 android:layout_width="wrap_content"
@@ -120,7 +146,7 @@
                 android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
 
-            <!-- 评论列表 -->
+            <!-- 评论列表容器：展示用户评论 -->
             <LinearLayout
                 android:id="@+id/commentsContainer"
                 android:layout_width="match_parent"
@@ -128,7 +154,7 @@
                 android:orientation="vertical"
                 android:layout_marginTop="16dp">
 
-                <!-- 示例评论 -->
+                <!-- 示例评论1 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -136,6 +162,7 @@
                     android:background="#F0F0F0"
                     android:padding="12dp"
                     android:layout_marginBottom="8dp">
+                    <!-- 评论用户名 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -143,6 +170,7 @@
                         android:textColor="#333"
                         android:textStyle="bold"
                         android:textSize="14sp"/>
+                    <!-- 评论内容 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -152,6 +180,7 @@
                         android:layout_marginTop="4dp"/>
                 </LinearLayout>
 
+                <!-- 示例评论2 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -159,6 +188,7 @@
                     android:background="#F0F0F0"
                     android:padding="12dp"
                     android:layout_marginBottom="8dp">
+                    <!-- 评论用户名 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -166,6 +196,7 @@
                         android:textColor="#333"
                         android:textStyle="bold"
                         android:textSize="14sp"/>
+                    <!-- 评论内容 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -177,7 +208,7 @@
 
             </LinearLayout>
 
-            <!-- 评论输入框 -->
+            <!-- 评论输入框：用于用户发表评论 -->
             <EditText
                 android:id="@+id/commentInput"
                 android:layout_width="match_parent"
@@ -190,6 +221,7 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="12dp"/>
 
+            <!-- 提交评论按钮：点击提交用户评论 -->
             <Button
                 android:id="@+id/submitCommentButton"
                 android:layout_width="wrap_content"

@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    序言性注释：
+    文件名：fragment_search.xml
+    用途：搜索页面的布局文件，提供商品搜索功能
+    主要组件：
+    - 搜索栏：包含搜索输入框和操作按钮
+    - 热门搜索区：展示热门搜索关键词
+    布局结构：使用ScrollView作为根布局，支持内容滚动
+    创建时间：2024
+    修改记录：
+    - 初始版本：实现基本的搜索页面布局
+-->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF">
 
+    <!-- 主内容容器：使用LinearLayout垂直排列各个组件 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="12dp">
 
-        <!-- 顶部搜索栏 -->
+        <!-- 顶部搜索栏：包含搜索输入框和操作按钮 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -22,12 +36,14 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="8dp">
 
+            <!-- 搜索图标 -->
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_menu_search"
                 android:tint="#333"
                 android:layout_marginEnd="4dp"/>
+            <!-- 搜索输入框：用于输入搜索关键词 -->
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -36,6 +52,7 @@
                 android:hint="输入名称"
                 android:textSize="15sp"
                 android:padding="0dp"/>
+            <!-- 搜索按钮：点击执行搜索操作 -->
             <TextView
                 android:id="@+id/btnSearch"
                 android:layout_width="wrap_content"
@@ -47,6 +64,7 @@
                 android:paddingEnd="8dp"
                 android:clickable="true"
                 android:focusable="true"/>
+            <!-- 取消按钮：点击取消搜索操作 -->
             <TextView
                 android:id="@+id/btnCancel"
                 android:layout_width="wrap_content"
@@ -60,7 +78,7 @@
                 android:focusable="true"/>
         </LinearLayout>
 
-        <!-- 热门搜索标题 -->
+        <!-- 热门搜索标题：显示热门搜索区域标题 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,7 +88,7 @@
             android:layout_marginBottom="8dp"
             android:layout_marginTop="4dp"/>
 
-        <!-- 热门搜索词 -->
+        <!-- 热门搜索词：使用GridLayout展示热门搜索关键词 -->
         <GridLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,6 +98,7 @@
             android:rowOrderPreserved="false"
             android:useDefaultMargins="true">
 
+            <!-- 热门搜索关键词：花 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
@@ -91,6 +110,7 @@
                 android:paddingRight="18dp"
                 android:textSize="15sp"
                 android:layout_margin="6dp"/>
+            <!-- 热门搜索关键词：多肉 -->
             <TextView
                 android:id="@+id/tvDuoRou"
                 android:layout_width="wrap_content"
@@ -105,6 +125,7 @@
                 android:layout_margin="6dp"
                 android:clickable="true"
                 android:focusable="true"/>
+            <!-- 热门搜索关键词：锄子 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
@@ -116,6 +137,7 @@
                 android:paddingRight="18dp"
                 android:textSize="15sp"
                 android:layout_margin="6dp"/>
+            <!-- 热门搜索关键词：泥土 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
@@ -127,6 +149,7 @@
                 android:paddingRight="18dp"
                 android:textSize="15sp"
                 android:layout_margin="6dp"/>
+            <!-- 热门搜索关键词：花盆 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
@@ -138,6 +161,7 @@
                 android:paddingRight="18dp"
                 android:textSize="15sp"
                 android:layout_margin="6dp"/>
+            <!-- 热门搜索关键词：幼苗 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
@@ -149,6 +173,7 @@
                 android:paddingRight="18dp"
                 android:textSize="15sp"
                 android:layout_margin="6dp"/>
+            <!-- 热门搜索关键词：种子 -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"

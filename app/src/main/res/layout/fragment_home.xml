@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    序言性注释：
+    文件名：fragment_home.xml
+    用途：首页Fragment的布局文件，展示应用的主要内容和功能入口
+    主要组件：
+    - 搜索栏：用于快速搜索商品
+    - 轮播图：展示重要信息和促销活动
+    - 功能按钮：推荐、养护技巧、更多分类
+    - 商品列表：展示推荐商品
+    布局结构：使用ScrollView作为根布局，支持内容滚动
+    创建时间：2024
+    修改记录：
+    - 初始版本：实现基本的首页布局和功能
+-->
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8FFF8">
 
+    <!-- 主内容容器：使用LinearLayout垂直排列各个组件 -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="12dp">
 
-        <!-- 搜索按钮 -->
+        <!-- 搜索按钮：点击后跳转到搜索页面 -->
         <LinearLayout
             android:id="@+id/searchButton"
             android:layout_width="match_parent"
@@ -31,12 +47,14 @@
             android:clickable="true"
             android:focusable="true">
 
+            <!-- 搜索图标 -->
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@android:drawable/ic_menu_search"
                 android:tint="#333"
                 android:layout_marginEnd="8dp"/>
+            <!-- 搜索提示文本 -->
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -47,14 +65,14 @@
                 android:textSize="15sp"/>
         </LinearLayout>
 
-        <!-- 轮播图 -->
+        <!-- 轮播图：展示重要信息和促销活动 -->
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/carouselViewPager"
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:layout_marginBottom="5dp"/>
 
-        <!-- 三个按钮 -->
+        <!-- 功能按钮组：提供主要功能入口 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -62,6 +80,7 @@
             android:gravity="center"
             android:layout_marginBottom="10dp">
 
+            <!-- 推荐按钮 -->
             <Button
                 android:layout_width="0dp"
                 android:layout_height="40dp"
@@ -70,6 +89,7 @@
                 android:backgroundTint="#C8F7C5"
                 android:textColor="#333"
                 android:layout_marginEnd="8dp"/>
+            <!-- 养护技巧按钮 -->
             <Button
                 android:id="@+id/btnCareTips"
                 android:layout_width="0dp"
@@ -79,6 +99,7 @@
                 android:backgroundTint="#C8F7C5"
                 android:textColor="#333"
                 android:layout_marginEnd="8dp"/>
+            <!-- 更多分类按钮 -->
             <Button
                 android:id="@+id/btnMoreCategory"
                 android:layout_width="0dp"
@@ -89,13 +110,13 @@
                 android:textColor="#333"/>
         </LinearLayout>
 
-        <!-- 商品列表（静态模拟4个） -->
+        <!-- 商品列表：展示推荐商品信息 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- 商品项1 -->
+            <!-- 商品项1：药用植物 -->
             <LinearLayout
                 android:id="@+id/item1"
                 android:layout_width="match_parent"
@@ -107,6 +128,7 @@
                 android:gravity="center_vertical"
                 android:radius="16dp">
 
+                <!-- 商品图片 -->
                 <ImageView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
@@ -115,6 +137,7 @@
                     android:layout_marginEnd="12dp"
                     android:background="@android:color/darker_gray"
                     android:radius="12dp"/>
+                <!-- 商品信息容器 -->
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -122,6 +145,7 @@
                     android:orientation="vertical"
                     android:gravity="center_vertical">
 
+                    <!-- 商品名称 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -129,6 +153,7 @@
                         android:textStyle="bold"
                         android:textSize="18sp"
                         android:textColor="#222"/>
+                    <!-- 商品详情 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

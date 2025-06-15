@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    序言性注释：
+    文件名：fragment_care_tips.xml
+    用途：植物养护技巧页面的布局文件，展示不同类型的植物养护知识
+    主要组件：
+    - 顶部导航栏：包含返回按钮和页面标题
+    - 植物养护分类：展示六种不同类型的植物养护技巧
+    布局结构：使用LinearLayout作为根布局，内部使用ScrollView支持内容滚动
+    创建时间：2024
+    修改记录：
+    - 初始版本：实现基本的养护技巧页面布局
+-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- 横幅 -->
+    <!-- 顶部导航栏：包含返回按钮和页面标题 -->
     <LinearLayout
         android:id="@+id/bannerLayout"
         android:layout_width="match_parent"
@@ -14,6 +27,7 @@
         android:background="@android:color/white"
         android:gravity="center_vertical">
 
+        <!-- 返回按钮：点击返回上一页面 -->
         <Button
             android:id="@+id/backButton"
             android:layout_width="wrap_content"
@@ -25,6 +39,7 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"/>
 
+        <!-- 页面标题：显示当前页面名称 -->
         <TextView
             android:id="@+id/careTipsBannerTitle"
             android:layout_width="0dp"
@@ -37,23 +52,25 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- 植物列表 -->
+    <!-- 植物养护分类列表：使用ScrollView支持内容滚动 -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!-- 内容容器：使用LinearLayout垂直排列各个分类 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="12dp">
 
-            <!-- 第一行植物 -->
+            <!-- 第一行植物养护分类 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
+                <!-- 多肉植物养护分类 -->
                 <LinearLayout
                     android:id="@+id/plant1_container"
                     android:layout_width="0dp"
@@ -64,19 +81,23 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground">
+                    <!-- 分类图片 -->
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/sell_plant_10"/>
+                    <!-- 分类名称 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="多肉植物养护"/>
                 </LinearLayout>
+                <!-- 分类间距 -->
                 <View
                     android:layout_width="12dp"
                     android:layout_height="match_parent"/>
+                <!-- 常见绿植养护分类 -->
                 <LinearLayout
                     android:id="@+id/plant2_container"
                     android:layout_width="0dp"
@@ -87,11 +108,13 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground">
+                    <!-- 分类图片 -->
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/sell_plant_4"/>
+                    <!-- 分类名称 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -99,12 +122,13 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 第二行植物 -->
+            <!-- 第二行植物养护分类 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
+                <!-- 花卉养护技巧分类 -->
                 <LinearLayout
                     android:id="@+id/plant3_container"
                     android:layout_width="0dp"
@@ -115,19 +139,23 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground">
+                    <!-- 分类图片 -->
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/sell_plant_2"/>
+                    <!-- 分类名称 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="花卉养护技巧"/>
                 </LinearLayout>
+                <!-- 分类间距 -->
                 <View
                     android:layout_width="12dp"
                     android:layout_height="match_parent"/>
+                <!-- 水培植物养护分类 -->
                 <LinearLayout
                     android:id="@+id/plant4_container"
                     android:layout_width="0dp"
@@ -138,11 +166,13 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground">
+                    <!-- 分类图片 -->
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/sell_plant_1"/>
+                    <!-- 分类名称 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -150,12 +180,13 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- 第三行植物 -->
+            <!-- 第三行植物养护分类 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginBottom="12dp">
+                <!-- 病虫害防治分类 -->
                 <LinearLayout
                     android:id="@+id/plant5_container"
                     android:layout_width="0dp"
@@ -166,19 +197,23 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground">
+                    <!-- 分类图片 -->
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/sell_plant_3"/>
+                    <!-- 分类名称 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="病虫害防治"/>
                 </LinearLayout>
+                <!-- 分类间距 -->
                 <View
                     android:layout_width="12dp"
                     android:layout_height="match_parent"/>
+                <!-- 土壤肥料选择分类 -->
                 <LinearLayout
                     android:id="@+id/plant6_container"
                     android:layout_width="0dp"
@@ -189,11 +224,13 @@
                     android:clickable="true"
                     android:focusable="true"
                     android:background="?attr/selectableItemBackground">
+                    <!-- 分类图片 -->
                     <ImageView
                         android:layout_width="120dp"
                         android:layout_height="100dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/round_plant_3"/>
+                    <!-- 分类名称 -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
