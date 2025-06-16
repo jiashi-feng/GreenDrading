@@ -77,4 +77,9 @@
         android:name="com.greendrading.app.ui.MyFollowFragment"
         android:label="我的关注" />
 
+    <fragment
+        android:id="@+id/my_coupons_fragment"
+        android:name="com.greendrading.app.ui.MyCouponsFragment"
+        android:label="红包卡券" />
+
 </navigation> 
