@@ -72,4 +72,9 @@
         android:name="com.example.yourapp.ui.MyHistoryFragment"
         android:label="历史浏览" />
 
+    <fragment
+        android:id="@+id/my_follow_fragment"
+        android:name="com.greendrading.app.ui.MyFollowFragment"
+        android:label="我的关注" />
+
 </navigation> 

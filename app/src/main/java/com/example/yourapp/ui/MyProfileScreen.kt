@@ -126,7 +126,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
             ) {
                 ProfileStat("我的收藏", userInfo.collect, modifier = Modifier.weight(1f).clickable { navController.navigate(R.id.my_collection_fragment) })
                 ProfileStat("历史浏览", userInfo.history, modifier = Modifier.weight(1f).clickable { navController.navigate(R.id.my_history_fragment) })
-                ProfileStat("我的关注", userInfo.myFollow, modifier = Modifier.weight(1f))
+                ProfileStat("我的关注", userInfo.myFollow, modifier = Modifier.weight(1f).clickable { navController.navigate(R.id.my_follow_fragment) })
                 ProfileStat("红包卡券", userInfo.coupon, modifier = Modifier.weight(1f))
             }
         }

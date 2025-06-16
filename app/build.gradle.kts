@@ -59,6 +59,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.activity:activity-compose:1.9.0")
     implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("androidx.compose.foundation:foundation")
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
@@ -82,7 +83,7 @@ dependencies {
     
     // Glide for image loading
     implementation("com.github.bumptech.glide:glide:4.16.0")
-    // kapt("com.github.bumptech.glide:compiler:4.16.0") // 暂时注释掉，排查kapt报错
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
     
     // Testing
     testImplementation("junit:junit:4.13.2")
