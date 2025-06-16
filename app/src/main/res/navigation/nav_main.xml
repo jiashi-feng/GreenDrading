@@ -11,8 +11,8 @@
 
     <fragment
         android:id="@+id/navigation_shop"
-        android:name="com.greendrading.app.ShopFragment"
-        android:label="购物" />
+        android:name="com.greendrading.app.ui.ShoppingCartFragment"
+        android:label="ShoppingCartFragment" />
 
     <fragment
         android:id="@+id/navigation_publish"
@@ -121,5 +121,10 @@
         android:id="@+id/about_us_fragment"
         android:name="com.greendrading.app.ui.AboutUsFragment"
         android:label="AboutUsFragment" />
+
+    <fragment
+        android:id="@+id/shopping_cart_fragment"
+        android:name="com.greendrading.app.ui.ShoppingCartFragment"
+        android:label="ShoppingCartFragment" />
 
 </navigation> 
