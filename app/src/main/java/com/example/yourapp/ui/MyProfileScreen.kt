@@ -176,9 +176,9 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
                 ProfileListItem(Icons.Outlined.Info, "服务条款") { navController.navigate(R.id.service_terms_fragment) }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-                ProfileListItem(Icons.Outlined.Info, "在线客服") { /* TODO: Navigate to Online Service */ }
+                ProfileListItem(Icons.Outlined.Info, "在线客服") { navController.navigate(R.id.online_customer_service_fragment) }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-                ProfileListItem(Icons.Outlined.Info, "关于我们") { /* TODO: Navigate to About Us */ }
+                ProfileListItem(Icons.Outlined.Info, "关于我们") { navController.navigate(R.id.about_us_fragment) }
             }
         }
     }

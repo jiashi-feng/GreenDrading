@@ -112,4 +112,14 @@
         android:name="com.greendrading.app.ui.ServiceTermsFragment"
         android:label="ServiceTermsFragment" />
 
+    <fragment
+        android:id="@+id/online_customer_service_fragment"
+        android:name="com.greendrading.app.ui.OnlineCustomerServiceFragment"
+        android:label="OnlineCustomerServiceFragment" />
+
+    <fragment
+        android:id="@+id/about_us_fragment"
+        android:name="com.greendrading.app.ui.AboutUsFragment"
+        android:label="AboutUsFragment" />
+
 </navigation> 
