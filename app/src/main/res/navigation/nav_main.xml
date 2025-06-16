@@ -34,7 +34,7 @@
 
     <fragment
         android:id="@+id/navigation_message"
-        android:name="com.greendrading.app.MessageFragment"
+        android:name="com.greendrading.app.ui.message.MessageFragment"
         android:label="消息" />
 
     <fragment

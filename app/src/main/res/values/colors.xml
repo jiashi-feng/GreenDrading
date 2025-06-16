@@ -42,4 +42,9 @@
     <color name="gray_light">#F5F5F5</color>
 
     <color name="radio_button_text">@color/text_primary</color>
+
+    <color name="green">#1ABC9C</color>
+    <color name="message_type_blue">#42A5F5</color>
+    <color name="message_type_green">#26A69A</color>
+    <color name="red">#FF0000</color>
 </resources>
