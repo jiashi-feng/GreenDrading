@@ -157,7 +157,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
                 TradeItem(Icons.Outlined.Home, "我发布的", modifier = Modifier.clickable { navController.navigate(R.id.my_posts_fragment) })
                 TradeItem(Icons.Outlined.Star, "我卖出的", modifier = Modifier.clickable { navController.navigate(R.id.my_sold_items_fragment) })
                 TradeItem(Icons.Outlined.ShoppingCart, "我买到的", modifier = Modifier.clickable { navController.navigate(R.id.my_purchased_items_fragment) })
-                TradeItem(Icons.Outlined.Star, "待评价")
+                TradeItem(Icons.Outlined.Star, "待评价", modifier = Modifier.clickable { navController.navigate(R.id.pending_review_fragment) })
             }
         }
 

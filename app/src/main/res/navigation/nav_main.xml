@@ -97,4 +97,9 @@
         android:name="com.greendrading.app.ui.MyPurchasedItemsFragment"
         android:label="我买到的" />
 
+    <fragment
+        android:id="@+id/pending_review_fragment"
+        android:name="com.greendrading.app.ui.PendingReviewFragment"
+        android:label="待评价" />
+
 </navigation> 
