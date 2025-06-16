@@ -39,7 +39,7 @@
     <color name="light_gray">#F5F5F5</color>
 
     <color name="text_hint">#BDBDBD</color>
-    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_light">#f0f0f0</color>
 
     <color name="radio_button_text">@color/text_primary</color>
 
@@ -47,4 +47,8 @@
     <color name="message_type_blue">#42A5F5</color>
     <color name="message_type_green">#26A69A</color>
     <color name="red">#FF0000</color>
+
+    <color name="white_smoke">#F5F5F5</color>
+
+    <color name="green_700">#00796B</color>
 </resources>

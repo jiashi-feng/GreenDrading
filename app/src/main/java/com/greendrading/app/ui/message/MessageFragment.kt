@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.tabs.TabLayout
 import com.greendrading.app.R
@@ -53,7 +54,13 @@ class MessageFragment : Fragment() {
                     messageList[idx] = messageList[idx].copy(unread = false)
                     messageAdapter.updateMessages(messageList)
                 }
-                if (message.sender == "底特律拳重娃娃") {
+                if (message.sender == "邀请") {
+                    // 使用 Navigation Component 跳转到邀请详情页
+                    findNavController().navigate(R.id.action_navigation_message_to_invitationDetailFragment)
+                } else if (message.sender == "妈妈") {
+                    // 使用 Navigation Component 跳转到妈妈聊天详情页
+                    findNavController().navigate(R.id.action_navigation_message_to_chatDetailFragment)
+                } else if (message.sender == "底特律拳重娃娃") {
                     val intent = Intent(context, ProductDetailActivity::class.java)
                     startActivity(intent)
                 } else if (message.sender == "海棠花，好养活吗？") {
@@ -65,6 +72,10 @@ class MessageFragment : Fragment() {
                 } else if (message.sender == "物流助手") {
                     val intent = Intent(context, com.greendrading.app.ui.logistics.LogisticsActivity::class.java)
                     startActivity(intent)
+                } else if (message.sender == "陌生人") {
+                    findNavController().navigate(R.id.strangerChatDetailFragment)
+                } else if (message.sender == "知识问答助手") {
+                    findNavController().navigate(R.id.knowledgeQaDetailFragment)
                 } else {
                     Toast.makeText(context, "进入详情：${message.sender}", Toast.LENGTH_SHORT).show()
                 }
@@ -126,48 +137,93 @@ class MessageFragment : Fragment() {
     }
 
     private fun loadMessages() {
-        messageList = mutableListOf(
-            Message(
-                id = "1",
-                avatarRes = R.drawable.avatar_shop, // 商家头像
-                sender = "底特律拳重娃娃",
-                content = "等待卖家发货\n我们家栀子花都很好，亲可以放心购买",
-                time = "1小时前",
-                unread = true,
-                type = MessageType.PRIVATE,
-                jumpType = MessageJumpType.CHAT
-            ),
-            Message(
-                id = "2",
-                avatarRes = R.drawable.avatar_child, // 儿童头像
-                sender = "海棠花，好养活吗？",
-                content = "fore....不知名等6人回答了问题",
-                time = "1小时前",
-                unread = true,
-                type = MessageType.PRIVATE,
-                jumpType = MessageJumpType.DISCUSS
-            ),
-            Message(
-                id = "3",
-                avatarRes = R.drawable.default_avatar, // 修改为默认头像，由适配器根据jumpType显示类型图标
-                sender = "每天逛逛",
-                content = "领券小助手恭喜你有优惠券可领取",
-                time = "4天前",
-                unread = false,
-                type = MessageType.NOTIFICATION,
-                jumpType = MessageJumpType.COUPON
-            ),
-            Message(
-                id = "4",
-                avatarRes = R.drawable.default_avatar, // 修改为默认头像，由适配器根据jumpType显示类型图标
-                sender = "物流助手",
-                content = "商品已取件，请关注物流信息",
-                time = "1天前",
-                unread = false,
-                type = MessageType.NOTIFICATION,
-                jumpType = MessageJumpType.LOGISTICS
+        messageList = if (currentTab == 0) { // 通知
+            mutableListOf(
+                Message(
+                    id = "1",
+                    avatarRes = R.drawable.avatar_shop, // 商家头像
+                    sender = "底特律拳重娃娃",
+                    content = "等待卖家发货\n我们家栀子花都很好，亲可以放心购买",
+                    time = "1小时前",
+                    unread = true,
+                    type = MessageType.PRIVATE,
+                    jumpType = MessageJumpType.CHAT
+                ),
+                Message(
+                    id = "2",
+                    avatarRes = R.drawable.avatar_child, // 儿童头像
+                    sender = "海棠花，好养活吗？",
+                    content = "fore....不知名等6人回答了问题",
+                    time = "1小时前",
+                    unread = true,
+                    type = MessageType.PRIVATE,
+                    jumpType = MessageJumpType.DISCUSS
+                ),
+                Message(
+                    id = "3",
+                    avatarRes = R.drawable.default_avatar,
+                    sender = "每天逛逛",
+                    content = "领券小助手恭喜你有优惠券可领取",
+                    time = "4天前",
+                    unread = false,
+                    type = MessageType.NOTIFICATION,
+                    jumpType = MessageJumpType.COUPON
+                ),
+                Message(
+                    id = "4",
+                    avatarRes = R.drawable.default_avatar,
+                    sender = "物流助手",
+                    content = "商品已取件，请关注物流信息",
+                    time = "1天前",
+                    unread = false,
+                    type = MessageType.NOTIFICATION,
+                    jumpType = MessageJumpType.LOGISTICS
+                )
             )
-        )
+        } else { // 私信
+            mutableListOf(
+                Message(
+                    id = "5",
+                    avatarRes = R.drawable.yaoqing,
+                    sender = "邀请",
+                    content = "拾柒的提问等你来答\n植物收到后，会不会有破损啊?",
+                    time = "1小时前",
+                    unread = true,
+                    type = MessageType.PRIVATE,
+                    jumpType = MessageJumpType.CHAT
+                ),
+                Message(
+                    id = "6",
+                    avatarRes = R.drawable.avatar_mother,
+                    sender = "妈妈",
+                    content = "你买的花什么时候到啊?",
+                    time = "1分钟前",
+                    unread = true,
+                    type = MessageType.PRIVATE,
+                    jumpType = MessageJumpType.CHAT
+                ),
+                Message(
+                    id = "7",
+                    avatarRes = R.drawable.avatar_stranger,
+                    sender = "陌生人",
+                    content = "你好，请问这个玫瑰怎么样?",
+                    time = "4天前",
+                    unread = false,
+                    type = MessageType.PRIVATE,
+                    jumpType = MessageJumpType.CHAT
+                ),
+                Message(
+                    id = "8",
+                    avatarRes = R.drawable.avatar_robot,
+                    sender = "知识问答助手",
+                    content = "有任何关于植物的问题随时提问",
+                    time = "",
+                    unread = false,
+                    type = MessageType.PRIVATE,
+                    jumpType = MessageJumpType.CHAT
+                )
+            )
+        }
         messageAdapter.updateMessages(messageList)
         binding.swipeRefresh.isRefreshing = false
     }

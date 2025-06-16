@@ -24,16 +24,19 @@
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_toEndOf="@id/btn_back"
+            android:layout_toStartOf="@id/btn_setting"
             android:layout_centerVertical="true"
             app:tabIndicatorColor="@color/primary"
             app:tabSelectedTextColor="@color/black"
             app:tabTextColor="@color/gray"
             app:tabIndicatorHeight="3dp"
             app:tabMode="fixed"
-            app:tabGravity="fill"/>
+            app:tabGravity="center"
+            app:tabPaddingStart="24dp"
+            app:tabPaddingEnd="24dp"/>
 
         <ImageButton
             android:id="@+id/btn_setting"

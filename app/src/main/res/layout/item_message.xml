@@ -19,8 +19,8 @@
 
         <!-- 左侧区域：类型icon / 头像 + 发送者/内容 -->
         <FrameLayout
-            android:layout_width="40dp"
-            android:layout_height="44dp">
+            android:layout_width="60dp"
+            android:layout_height="60dp">
 
             <!-- 头像 -->
             <com.google.android.material.imageview.ShapeableImageView
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="0dp">
+            android:layout_marginStart="16dp">
 
             <!-- 发送者和时间 -->
             <LinearLayout
