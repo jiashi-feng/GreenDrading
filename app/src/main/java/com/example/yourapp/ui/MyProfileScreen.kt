@@ -172,13 +172,13 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
                 .padding(horizontal = 12.dp)
         ) {
             Column {
-                ProfileListItem(Icons.Outlined.Settings, "设置")
+                ProfileListItem(Icons.Outlined.Settings, "设置") { navController.navigate(R.id.settings_fragment) }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-                ProfileListItem(Icons.Outlined.Info, "服务条款")
+                ProfileListItem(Icons.Outlined.Info, "服务条款") { /* TODO: Navigate to Service Terms */ }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-                ProfileListItem(Icons.Outlined.Info, "在线客服")
+                ProfileListItem(Icons.Outlined.Info, "在线客服") { /* TODO: Navigate to Online Service */ }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-                ProfileListItem(Icons.Outlined.Info, "关于我们")
+                ProfileListItem(Icons.Outlined.Info, "关于我们") { /* TODO: Navigate to About Us */ }
             }
         }
     }
@@ -215,9 +215,9 @@ fun TradeItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: Stri
 }
 
 @Composable
-fun ProfileListItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String) {
+fun ProfileListItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String, onClick: () -> Unit) {
     ListItem(
-        modifier = Modifier.clickable { /* TODO: 跳转到对应页面 */ },
+        modifier = Modifier.clickable(onClick = onClick),
         icon = { Icon(icon, contentDescription = label, tint = Color(0xFF8A8A8A), modifier = Modifier.size(22.dp)) },
         text = { Text(label, fontSize = 15.sp, color = Color(0xFF444444)) }
     )

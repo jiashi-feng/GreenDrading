@@ -95,11 +95,16 @@
     <fragment
         android:id="@+id/my_purchased_items_fragment"
         android:name="com.greendrading.app.ui.MyPurchasedItemsFragment"
-        android:label="我买到的" />
+        android:label="MyPurchasedItemsFragment" />
 
     <fragment
         android:id="@+id/pending_review_fragment"
         android:name="com.greendrading.app.ui.PendingReviewFragment"
-        android:label="待评价" />
+        android:label="PendingReviewFragment" />
+
+    <fragment
+        android:id="@+id/settings_fragment"
+        android:name="com.greendrading.app.ui.SettingsFragment"
+        android:label="SettingsFragment" />
 
 </navigation> 
