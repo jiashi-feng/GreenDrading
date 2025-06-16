@@ -107,4 +107,9 @@
         android:name="com.greendrading.app.ui.SettingsFragment"
         android:label="SettingsFragment" />
 
+    <fragment
+        android:id="@+id/service_terms_fragment"
+        android:name="com.greendrading.app.ui.ServiceTermsFragment"
+        android:label="ServiceTermsFragment" />
+
 </navigation> 

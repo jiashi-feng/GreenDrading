@@ -174,7 +174,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
             Column {
                 ProfileListItem(Icons.Outlined.Settings, "设置") { navController.navigate(R.id.settings_fragment) }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-                ProfileListItem(Icons.Outlined.Info, "服务条款") { /* TODO: Navigate to Service Terms */ }
+                ProfileListItem(Icons.Outlined.Info, "服务条款") { navController.navigate(R.id.service_terms_fragment) }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
                 ProfileListItem(Icons.Outlined.Info, "在线客服") { /* TODO: Navigate to Online Service */ }
                 Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
