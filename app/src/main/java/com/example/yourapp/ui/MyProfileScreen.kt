@@ -154,7 +154,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
                     .padding(vertical = 16.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                TradeItem(Icons.Outlined.Home, "我发布的")
+                TradeItem(Icons.Outlined.Home, "我发布的", modifier = Modifier.clickable { navController.navigate(R.id.my_posts_fragment) })
                 TradeItem(Icons.Outlined.Star, "我卖出的")
                 TradeItem(Icons.Outlined.ShoppingCart, "我买到的")
                 TradeItem(Icons.Outlined.Star, "待评价")
@@ -194,23 +194,23 @@ fun ProfileStat(label: String, count: Int, modifier: Modifier = Modifier) {
 }
 
 @Composable
-fun TradeItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String) {
+fun TradeItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String, modifier: Modifier = Modifier) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .padding(8.dp)
-            .clickable { /* TODO: 跳转到对应页面 */ }
+        modifier = modifier
     ) {
-        Box(
-            modifier = Modifier
-                .size(32.dp)
-                .background(Color(0xFF0A7A5A).copy(alpha = 0.08f), shape = CircleShape),
-            contentAlignment = Alignment.Center
-        ) {
-            Icon(icon, contentDescription = label, tint = Color(0xFF0A7A5A), modifier = Modifier.size(22.dp))
-        }
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            tint = Color(0xFF0A7A5A),
+            modifier = Modifier.size(24.dp)
+        )
         Spacer(modifier = Modifier.height(4.dp))
-        Text(text = label, fontSize = 13.sp, color = Color(0xFF333333))
+        Text(
+            text = label,
+            fontSize = 14.sp,
+            color = Color(0xFF666666)
+        )
     }
 }
 
