@@ -151,13 +151,15 @@ fun MyProfileScreen() {
                 .fillMaxWidth()
                 .padding(horizontal = 12.dp)
         ) {
-            ProfileListItem(Icons.Outlined.Settings, "设置")
-            Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-            ProfileListItem(Icons.Outlined.Info, "服务条款")
-            Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-            ProfileListItem(Icons.Outlined.Info, "在线客服")
-            Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
-            ProfileListItem(Icons.Outlined.Info, "关于我们")
+            Column {
+                ProfileListItem(Icons.Outlined.Settings, "设置")
+                Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
+                ProfileListItem(Icons.Outlined.Info, "服务条款")
+                Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
+                ProfileListItem(Icons.Outlined.Info, "在线客服")
+                Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
+                ProfileListItem(Icons.Outlined.Info, "关于我们")
+            }
         }
     }
 }
