@@ -87,4 +87,9 @@
         android:name="com.greendrading.app.ui.MyPostsFragment"
         android:label="我发布的" />
 
+    <fragment
+        android:id="@+id/my_sold_items_fragment"
+        android:name="com.greendrading.app.ui.MySoldItemsFragment"
+        android:label="我卖出的" />
+
 </navigation> 
