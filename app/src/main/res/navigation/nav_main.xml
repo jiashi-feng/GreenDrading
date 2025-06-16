@@ -62,4 +62,9 @@
         android:name="com.greendrading.app.ui.publish.ListingFragment"
         android:label="自主保管" />
 
+    <fragment
+        android:id="@+id/my_collection_fragment"
+        android:name="com.example.yourapp.ui.MyCollectionFragment"
+        android:label="我的收藏" />
+
 </navigation> 

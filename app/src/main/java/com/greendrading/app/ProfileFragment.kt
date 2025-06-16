@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
-import com.example.yourapp.ui.MyProfileScreen
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 
 class ProfileFragment : Fragment() {
     override fun onCreateView(
@@ -14,10 +15,17 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return ComposeView(requireContext()).apply {
-            setContent {
-                MyProfileScreen()
-            }
+        return ComposeView(requireContext())
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val navController = requireActivity()
+            .supportFragmentManager
+            .findFragmentById(R.id.nav_host_fragment)
+            ?.findNavController() ?: findNavController()
+        (view as ComposeView).setContent {
+            com.example.yourapp.ui.MyProfileScreen(navController = navController)
         }
     }
 } 
