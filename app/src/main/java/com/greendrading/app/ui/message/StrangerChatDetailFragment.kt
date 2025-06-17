@@ -10,13 +10,23 @@ import com.greendrading.app.MainActivity
 import com.greendrading.app.R
 import com.greendrading.app.databinding.FragmentStrangerChatDetailBinding
 
+/**
+ * 陌生人聊天详情页面Fragment
+ * 用于显示与陌生人的聊天记录，主要处理商品咨询等场景
+ */
 class StrangerChatDetailFragment : Fragment() {
 
+    // ViewBinding相关变量
     private var _binding: FragmentStrangerChatDetailBinding? = null
     private val binding get() = _binding!!
+    
+    // 聊天适配器和消息列表
     private lateinit var chatAdapter: ChatAdapter
     private val messages = mutableListOf<ChatMessage>()
 
+    /**
+     * 创建Fragment视图
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -26,12 +36,16 @@ class StrangerChatDetailFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * 视图创建完成后的初始化
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Hide bottom navigation
+        // 隐藏底部导航栏
         (activity as? MainActivity)?.hideBottomNavigation()
 
+        // 设置返回按钮点击事件
         binding.toolbar.setNavigationOnClickListener { 
             requireActivity().onBackPressed() 
         }
@@ -40,6 +54,10 @@ class StrangerChatDetailFragment : Fragment() {
         loadStrangerMessages()
     }
 
+    /**
+     * 设置RecyclerView和适配器
+     * 用于显示聊天消息列表
+     */
     private fun setupRecyclerView() {
         chatAdapter = ChatAdapter(messages)
         binding.rvChatMessages.apply {
@@ -48,8 +66,14 @@ class StrangerChatDetailFragment : Fragment() {
         }
     }
 
+    /**
+     * 加载陌生人聊天消息
+     * 这里使用模拟数据，实际应用中应该从数据库或网络加载
+     * 包含图片消息和文本消息两种类型
+     */
     private fun loadStrangerMessages() {
         messages.clear()
+        // 添加图片消息
         messages.add(ChatMessage(
             id = "1",
             senderId = "stranger",
@@ -59,6 +83,7 @@ class StrangerChatDetailFragment : Fragment() {
             avatarRes = R.drawable.avatar_stranger,
             imageRes = R.drawable.wuliu3
         ))
+        // 添加文本消息
         messages.add(ChatMessage(
             id = "2",
             senderId = "stranger",
@@ -71,9 +96,13 @@ class StrangerChatDetailFragment : Fragment() {
         binding.rvChatMessages.scrollToPosition(messages.size - 1)
     }
 
+    /**
+     * Fragment销毁时清理资源
+     * 显示底部导航栏并释放ViewBinding
+     */
     override fun onDestroyView() {
         super.onDestroyView()
-        // Show bottom navigation again
+        // 显示底部导航栏
         (activity as? MainActivity)?.showBottomNavigation()
         _binding = null
     }

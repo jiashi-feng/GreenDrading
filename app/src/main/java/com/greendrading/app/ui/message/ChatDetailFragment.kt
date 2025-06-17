@@ -12,14 +12,23 @@ import com.greendrading.app.MainActivity
 import com.greendrading.app.databinding.FragmentChatDetailBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+/**
+ * 聊天详情页面Fragment
+ * 用于显示与特定联系人的聊天记录和发送新消息
+ */
 class ChatDetailFragment : Fragment() {
 
+    // ViewBinding相关变量
     private var _binding: FragmentChatDetailBinding? = null
     private val binding get() = _binding!!
 
+    // 聊天适配器和消息列表
     private lateinit var chatAdapter: ChatAdapter
     private val chatMessageList: MutableList<ChatMessage> = mutableListOf()
 
+    /**
+     * 创建Fragment视图
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -29,14 +38,21 @@ class ChatDetailFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * 视图创建完成后的初始化
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        // 隐藏底部导航栏
         (activity as? MainActivity)?.findViewById<BottomNavigationView>(R.id.bottom_navigation)?.visibility = View.GONE
         setupRecyclerView()
         loadChatMessages()
         setupListeners()
     }
 
+    /**
+     * 设置RecyclerView和适配器
+     */
     private fun setupRecyclerView() {
         chatAdapter = ChatAdapter(chatMessageList)
         binding.rvChatMessages.apply {
@@ -45,6 +61,10 @@ class ChatDetailFragment : Fragment() {
         }
     }
 
+    /**
+     * 加载聊天消息数据
+     * 这里使用模拟数据，实际应用中应该从数据库或网络加载
+     */
     private fun loadChatMessages() {
         chatMessageList.clear()
         chatMessageList.addAll(listOf(
@@ -101,11 +121,16 @@ class ChatDetailFragment : Fragment() {
         binding.rvChatMessages.scrollToPosition(chatMessageList.size - 1) // 滚动到最新消息
     }
 
+    /**
+     * 设置各种按钮的点击监听器
+     */
     private fun setupListeners() {
+        // 返回按钮点击事件
         binding.btnBackChatDetail.setOnClickListener { 
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
 
+        // 发送消息按钮点击事件
         binding.btnSendMore.setOnClickListener { 
             val messageContent = binding.etMessageInput.text.toString().trim()
             if (messageContent.isNotEmpty()) {
@@ -125,18 +150,24 @@ class ChatDetailFragment : Fragment() {
             }
         }
 
+        // 表情按钮点击事件
         binding.btnEmoji.setOnClickListener {
             Toast.makeText(context, "表情功能开发中", Toast.LENGTH_SHORT).show()
         }
 
+        // 语音按钮点击事件
         binding.btnVoice.setOnClickListener {
             Toast.makeText(context, "语音功能开发中", Toast.LENGTH_SHORT).show()
         }
     }
 
+    /**
+     * Fragment销毁时清理资源
+     */
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        // 显示底部导航栏
         (activity as? MainActivity)?.findViewById<BottomNavigationView>(R.id.bottom_navigation)?.visibility = View.VISIBLE
     }
 } 

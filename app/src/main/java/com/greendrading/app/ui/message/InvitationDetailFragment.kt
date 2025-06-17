@@ -10,14 +10,23 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.greendrading.app.R
 import com.greendrading.app.databinding.FragmentInvitationDetailBinding
 
+/**
+ * 邀请详情页面Fragment
+ * 用于显示用户对商品的咨询邀请列表，包含回复和关闭功能
+ */
 class InvitationDetailFragment : Fragment() {
 
+    // ViewBinding相关变量
     private var _binding: FragmentInvitationDetailBinding? = null
     private val binding get() = _binding!!
 
+    // 邀请列表适配器和数据列表
     private lateinit var invitationAdapter: InvitationAdapter
     private val invitationList: MutableList<InvitationItem> = mutableListOf()
 
+    /**
+     * 创建Fragment视图
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -27,6 +36,10 @@ class InvitationDetailFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * 视图创建完成后的初始化
+     * 包括设置RecyclerView、加载邀请数据、设置监听器等
+     */
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
@@ -34,6 +47,10 @@ class InvitationDetailFragment : Fragment() {
         setupListeners()
     }
 
+    /**
+     * 设置RecyclerView和适配器
+     * 包含回复和关闭两个操作的回调处理
+     */
     private fun setupRecyclerView() {
         invitationAdapter = InvitationAdapter(
             invitations = invitationList,
@@ -56,9 +73,15 @@ class InvitationDetailFragment : Fragment() {
         }
     }
 
+    /**
+     * 加载邀请数据
+     * 这里使用模拟数据，实际应用中应该从数据库或网络加载
+     * 包含用户头像、用户名、问题、商品图片、商品名称、价格等信息
+     */
     private fun loadInvitations() {
         invitationList.clear()
         invitationList.addAll(listOf(
+            // 第一条邀请数据
             InvitationItem(
                 id = "inv1",
                 userAvatarRes = R.drawable.avatar_mother, // 惊鸿一梦的头像
@@ -69,6 +92,7 @@ class InvitationDetailFragment : Fragment() {
                 productPrice = "¥ 59.8",
                 timeAndReplies = "4天前 共8条回复"
             ),
+            // 第二条邀请数据
             InvitationItem(
                 id = "inv2",
                 userAvatarRes = R.drawable.avatar_stranger, // 开心的小熊的头像
@@ -79,6 +103,7 @@ class InvitationDetailFragment : Fragment() {
                 productPrice = "¥ 59.8",
                 timeAndReplies = "4天前 共8条回复"
             ),
+            // 第三条邀请数据
             InvitationItem(
                 id = "inv3",
                 userAvatarRes = R.drawable.avatar_shop, // 南苑的花圃的头像
@@ -89,6 +114,7 @@ class InvitationDetailFragment : Fragment() {
                 productPrice = "¥ 59.8",
                 timeAndReplies = "4天前 共8条回复"
             ),
+            // 第四条邀请数据
             InvitationItem(
                 id = "inv4",
                 userAvatarRes = R.drawable.avatar_child, // 奋进的小鸟的头像
@@ -99,6 +125,7 @@ class InvitationDetailFragment : Fragment() {
                 productPrice = "¥ 39.9",
                 timeAndReplies = "5天前 共12条回复"
             ),
+            // 第五条邀请数据
             InvitationItem(
                 id = "inv5",
                 userAvatarRes = R.drawable.avatar_mother, // 惊鸿一梦的头像 (示例)
@@ -109,6 +136,7 @@ class InvitationDetailFragment : Fragment() {
                 productPrice = "¥ 59.8",
                 timeAndReplies = "4天前 共8条回复"
             ),
+            // 第六条邀请数据
             InvitationItem(
                 id = "inv6",
                 userAvatarRes = R.drawable.avatar_stranger, // 开心的小熊的头像 (示例)
@@ -119,6 +147,7 @@ class InvitationDetailFragment : Fragment() {
                 productPrice = "¥ 59.8",
                 timeAndReplies = "4天前 共8条回复"
             ),
+            // 第七条邀请数据
             InvitationItem(
                 id = "inv7",
                 userAvatarRes = R.drawable.avatar_shop, // 南苑的花圃的头像 (示例)
@@ -129,6 +158,7 @@ class InvitationDetailFragment : Fragment() {
                 productPrice = "¥ 59.8",
                 timeAndReplies = "4天前 共8条回复"
             ),
+            // 第八条邀请数据
             InvitationItem(
                 id = "inv8",
                 userAvatarRes = R.drawable.avatar_child, // 奋进的小鸟的头像 (示例)
@@ -143,12 +173,19 @@ class InvitationDetailFragment : Fragment() {
         invitationAdapter.updateInvitations(invitationList)
     }
 
+    /**
+     * 设置各种按钮的点击监听器
+     */
     private fun setupListeners() {
+        // 返回按钮点击事件
         binding.btnBackInvitationDetail.setOnClickListener { 
             requireActivity().onBackPressedDispatcher.onBackPressed()
         }
     }
 
+    /**
+     * Fragment销毁时清理资源
+     */
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
