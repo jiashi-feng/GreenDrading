@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+    序言性注释：
+    文件名：activity_main.xml
+    用途：主活动布局文件，定义了应用程序的主界面结构
+    主要组件：
+    - FragmentContainerView：用于导航和显示不同fragment的容器
+    - BottomNavigationView：底部导航栏，用于切换不同功能模块
+    布局结构：使用ConstraintLayout作为根布局，实现灵活的布局约束
+    创建时间：2024
+    修改记录：
+    - 初始版本：实现基本的导航结构
+-->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +20,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Fragment容器：用于显示不同的功能页面，支持导航功能 -->
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
@@ -17,6 +31,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_main" />
 
+    <!-- 底部导航栏：提供主要功能模块的快速访问 -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"

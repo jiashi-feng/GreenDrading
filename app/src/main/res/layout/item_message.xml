@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="2dp"
+        android:paddingVertical="16dp"
+        android:gravity="center_vertical">
+
+        <!-- 左侧区域：类型icon / 头像 + 发送者/内容 -->
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp">
+
+            <!-- 头像 -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                android:src="@drawable/default_avatar"
+                android:visibility="visible" />
+
+            <!-- 类型icon (与头像重叠，通过visibility控制) -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/iv_type_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_message_type_coupon"
+                android:background="@drawable/bg_circular_blue"
+                android:scaleType="fitCenter"
+                android:padding="4dp"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <!-- 发送者名称 + 消息内容预览 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <!-- 发送者和时间 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="4dp">
+
+                <TextView
+                    android:id="@+id/tv_sender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray"
+                    android:textSize="10sp"/>
+
+                <View
+                    android:id="@+id/v_unread"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:background="@drawable/bg_unread_dot"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <!-- 消息预览 -->
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="14sp"
+                android:maxLines="3"/>
+        </LinearLayout>
+
+        <!-- 右侧区域：时间 + 操作按钮 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginStart="0dp">
+
+            <!-- 操作按钮（如去领取/去查看） -->
+            <Button
+                android:id="@+id/btn_action"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/primary"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:paddingHorizontal="8dp"
+                android:minWidth="0dp"
+                android:visibility="gone"
+                android:text="去领取"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView> 
