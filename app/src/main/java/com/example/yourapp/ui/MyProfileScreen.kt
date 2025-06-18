@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import com.greendrading.app.R
 
+// 我的界面主屏幕 Composable，展示用户信息、统计、交易入口和其他功能
 @Composable
 fun MyProfileScreen(navController: androidx.navigation.NavController) {
     val context = LocalContext.current
@@ -110,7 +111,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
 
         Spacer(modifier = Modifier.height(32.dp))
 
-        // 四个统计项
+        // 四个统计项：我的收藏、历史浏览、我的关注、红包卡券
         Card(
             shape = RoundedCornerShape(16.dp),
             elevation = 0.dp,
@@ -133,7 +134,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // 我的交易
+        // 我的交易区块，包含我发布的、我卖出的、我买到的、待评价
         Text(
             text = "我的交易",
             fontWeight = FontWeight.Bold,
@@ -163,7 +164,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        // 其他功能
+        // 其他功能区块，包含设置、服务条款、在线客服、关于我们
         Card(
             shape = RoundedCornerShape(16.dp),
             elevation = 0.dp,
@@ -184,6 +185,7 @@ fun MyProfileScreen(navController: androidx.navigation.NavController) {
     }
 }
 
+// 个人统计项组件
 @Composable
 fun ProfileStat(label: String, count: Int, modifier: Modifier = Modifier) {
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = modifier) {
@@ -193,6 +195,7 @@ fun ProfileStat(label: String, count: Int, modifier: Modifier = Modifier) {
     }
 }
 
+// 交易入口项组件
 @Composable
 fun TradeItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String, modifier: Modifier = Modifier) {
     Column(
@@ -214,6 +217,7 @@ fun TradeItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: Stri
     }
 }
 
+// 个人功能列表项组件
 @Composable
 fun ProfileListItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label: String, onClick: () -> Unit) {
     ListItem(
@@ -223,6 +227,7 @@ fun ProfileListItem(icon: androidx.compose.ui.graphics.vector.ImageVector, label
     )
 }
 
+// 用户信息数据类
 data class UserInfo(
     val avatarUrl: String,
     val username: String,

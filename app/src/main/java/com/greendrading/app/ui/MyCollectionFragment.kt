@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.greendrading.app.R
 
+// 我的收藏 Fragment，承载 Compose 收藏界面
 class MyCollectionFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -17,6 +18,7 @@ class MyCollectionFragment : Fragment() {
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
+                // Compose 收藏界面，展示收藏列表
                 MyCollectionScreen(
                     navController = findNavController(),
                     items = listOf(

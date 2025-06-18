@@ -61,6 +61,7 @@ data class Product(
     val rating: String // e.g., "97.8%好评"
 )
 
+// 卡券界面主屏幕 Composable，展示用户卡券和推荐商品
 @Composable
 fun MyCouponsScreen(navController: NavController) {
     var selectedTabIndex by remember { mutableIntStateOf(0) }
@@ -263,6 +264,7 @@ fun PreviewMyCouponsScreen() {
     MyCouponsScreen(navController = rememberNavController())
 }
 
+// 卡券项组件，展示单个卡券的详细信息
 @Composable
 fun CouponItem(coupon: Coupon) {
     Card(
@@ -358,6 +360,7 @@ fun CouponItem(coupon: Coupon) {
     }
 }
 
+// 推荐商品项组件
 @Composable
 fun ProductItem(product: Product) {
     Card(

@@ -35,7 +35,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.greendrading.app.R
 
-// Data classes
+// 购物车商品项数据类
 data class CartItem(
     val id: Int,
     val imageRes: Int,
@@ -49,6 +49,7 @@ data class CartItem(
     val extraInfo: String? = null // e.g., "即将售罄", "低于同款均价9%", "聚划算 6月20日23:59结束"
 )
 
+// 店铺数据类，包含该店铺下的所有购物车商品
 data class Shop(
     val id: Int,
     val name: String,
@@ -56,6 +57,7 @@ data class Shop(
     val items: List<CartItem>
 )
 
+// 购物车主界面 Composable，展示所有店铺及其商品
 @Composable
 fun ShoppingCartScreen(navController: NavController) {
     val shops = remember { mutableStateListOf(
@@ -129,6 +131,7 @@ fun ShoppingCartScreen(navController: NavController) {
     }
 }
 
+// 顶部应用栏组件
 @Composable
 fun TopAppBarContent() {
     Box(
@@ -162,6 +165,7 @@ fun TopAppBarContent() {
     }
 }
 
+// 顶部选项栏组件
 @Composable
 fun TopOptionsBar() {
     Row(
@@ -200,6 +204,7 @@ fun TopOptionsBar() {
     Divider(color = Color(0xFFE0E0E0), thickness = 1.dp)
 }
 
+// 顶部选项按钮组件
 @Composable
 fun TopOption(icon: ImageVector, text: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
     Row(
@@ -213,6 +218,7 @@ fun TopOption(icon: ImageVector, text: String, onClick: () -> Unit, modifier: Mo
     }
 }
 
+// 店铺区块组件，展示店铺及其下所有商品
 @Composable
 fun ShopSection(shop: Shop, onItemSelected: (Int, Int, Boolean) -> Unit) {
     var isShopSelected by remember(shop) { mutableStateOf(shop.isSelected) }

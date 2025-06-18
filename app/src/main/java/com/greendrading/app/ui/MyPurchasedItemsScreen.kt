@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.greendrading.app.R // Make sure this import is correct for your R file
 
-// Data class for a Purchased Item
+// 我买到的数据类，表示已购买商品
 data class PurchasedItem(
     val id: Int,
     val imageRes: Int,
@@ -41,6 +41,7 @@ data class PurchasedItem(
     val date: String // e.g., "2025-03-24"
 )
 
+// 已购买商品卡片组件，展示单个订单的详细信息和操作
 @Composable
 fun PurchasedItemCard(item: PurchasedItem) {
     Card(
@@ -250,6 +251,7 @@ fun PurchasedItemCard(item: PurchasedItem) {
     }
 }
 
+// 我买到的主界面 Composable，展示顶部栏和订单列表
 @Composable
 fun MyPurchasedItemsScreen(navController: NavController) {
     Log.d("MyPurchasedItemsScreen", "MyPurchasedItemsScreen is being composed")
