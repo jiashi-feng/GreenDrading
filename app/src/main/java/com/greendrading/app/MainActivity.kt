@@ -6,6 +6,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import android.view.View
 
 /**
  * 主活动类
@@ -38,5 +39,13 @@ class MainActivity : AppCompatActivity() {
         // 注意：此处可能抛出NullPointerException
         bottomNav = findViewById(R.id.bottom_navigation)
         bottomNav.setupWithNavController(navController)
+    }
+
+    fun hideBottomNavigation() {
+        bottomNav.visibility = View.GONE
+    }
+
+    fun showBottomNavigation() {
+        bottomNav.visibility = View.VISIBLE
     }
 } 

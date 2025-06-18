@@ -47,8 +47,15 @@
 
     <fragment
         android:id="@+id/navigation_message"
-        android:name="com.greendrading.app.MessageFragment"
-        android:label="消息" />
+        android:name="com.greendrading.app.ui.message.MessageFragment"
+        android:label="消息" >
+        <action
+            android:id="@+id/action_navigation_message_to_invitationDetailFragment"
+            app:destination="@id/invitationDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_message_to_chatDetailFragment"
+            app:destination="@id/chatDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
@@ -137,5 +144,25 @@
             android:name="careTools"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/invitationDetailFragment"
+        android:name="com.greendrading.app.ui.message.InvitationDetailFragment"
+        android:label="邀请详情" />
+
+    <fragment
+        android:id="@+id/chatDetailFragment"
+        android:name="com.greendrading.app.ui.message.ChatDetailFragment"
+        android:label="聊天详情" />
+
+    <fragment
+        android:id="@+id/strangerChatDetailFragment"
+        android:name="com.greendrading.app.ui.message.StrangerChatDetailFragment"
+        android:label="陌生人聊天详情" />
+
+    <fragment
+        android:id="@+id/knowledgeQaDetailFragment"
+        android:name="com.greendrading.app.ui.message.KnowledgeQaDetailFragment"
+        android:label="知识问答助手详情" />
 
 </navigation> 
