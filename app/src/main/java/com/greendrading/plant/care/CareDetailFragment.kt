@@ -63,6 +63,18 @@ class CareDetailFragment : Fragment() {
         // 加载布局文件
         val view = inflater.inflate(R.layout.fragment_care_detail, container, false)
 
+        // 参数校验：无效则跳转首页
+        val bundle = arguments
+        val title = bundle?.getString("careTitle")
+        val imageResId = bundle?.getInt("careImage") ?: 0
+        val tools = bundle?.getString("careTools")
+        if (title.isNullOrEmpty() || imageResId == 0 || tools.isNullOrEmpty()) {
+            view.post {
+                findNavController().navigate(R.id.homeFragment)
+            }
+            return view
+        }
+
         // 设置返回按钮点击事件
         val backButton = view.findViewById<Button>(R.id.backButton)
         backButton.setOnClickListener {
@@ -71,15 +83,9 @@ class CareDetailFragment : Fragment() {
 
         // 从参数中获取数据并设置到视图
         val careDetailBannerTitleTextView = view.findViewById<TextView>(R.id.careDetailBannerTitle)
-        arguments?.let { bundle ->
-            val title = bundle.getString("careTitle")
-            val imageResId = bundle.getInt("careImage")
-            val tools = bundle.getString("careTools")
-
-            careDetailBannerTitleTextView.text = title
-            view.findViewById<ImageView>(R.id.plantImage).setImageResource(imageResId)
-            view.findViewById<TextView>(R.id.toolsContent).text = tools
-        }
+        careDetailBannerTitleTextView.text = title
+        view.findViewById<ImageView>(R.id.plantImage).setImageResource(imageResId)
+        view.findViewById<TextView>(R.id.toolsContent).text = tools
 
         // 设置养护技巧点击事件
         val careTipsContainer = view.findViewById<LinearLayout>(R.id.careTipsContainer)
@@ -126,7 +132,7 @@ class CareDetailFragment : Fragment() {
                     }
                     else -> {
                         // 处理未知的养护类型
-                       
+                        Toast.makeText(context, "未能匹配养护技巧，当前标题为: $currentTitle", Toast.LENGTH_LONG).show()
                     }
                 }
             }
