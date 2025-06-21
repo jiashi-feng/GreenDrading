@@ -126,7 +126,7 @@ class CareDetailFragment : Fragment() {
                     }
                     else -> {
                         // 处理未知的养护类型
-                        Toast.makeText(context, "未能匹配养护技巧，当前标题为: $currentTitle", Toast.LENGTH_LONG).show()
+                       
                     }
                 }
             }
