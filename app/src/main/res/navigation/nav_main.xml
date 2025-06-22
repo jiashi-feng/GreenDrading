@@ -5,166 +5,101 @@
     app : startDestination = "@id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.greendrading.app.HomeFragment"
-        android:label="首页">
-        <action
-            android:id="@+id/action_homeFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_homeCategoryFragment"
-            app:destination="@id/homeCategoryFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_productDetailFragment"
-            app:destination="@id/productDetailFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_careTipsFragment"
-            app:destination="@id/careTipsFragment" />
-    </fragment>
+    android : id = "@+id/navigation_home"
+    android : name = "com.greendrading.app.HomeFragment"
+    android : label = "首页">
+    <action
+    android : id = "@+id/action_homeFragment_to_searchFragment"
+    app : destination = "@id/searchFragment" / >
+    <action
+    android : id = "@+id/action_homeFragment_to_homeCategoryFragment"
+    app : destination = "@id/homeCategoryFragment" / >
+    <action
+    android : id = "@+id/action_homeFragment_to_productDetailFragment"
+    app : destination = "@id/productDetailFragment" / >
+    <action
+    android : id = "@+id/action_homeFragment_to_careTipsFragment"
+    app : destination = "@id/careTipsFragment" / >
+    < / fragment>
 
     <fragment
-        android:id="@+id/navigation_shop"
-        android:name="com.greendrading.app.ui.ShoppingCartFragment"
-        android:label="ShoppingCartFragment" />
+    android : id = "@+id/navigation_shop"
+    android : name = "com.greendrading.app.ShopFragment"
+    android : label = "购物" / >
 
     <fragment
-        android:id="@+id/navigation_publish"
-        android:name="com.greendrading.app.ui.publish.PublishFragment"
-        android:label="发布">
-        <action
-            android:id="@+id/action_publishFragment_to_shareGoodFindsFragment"
-            app:destination="@id/shareGoodFindsFragment" />
-        <action
-            android:id="@+id/action_publishFragment_to_quickSellFragment"
-            app:destination="@id/quickSellFragment" />
-        <action
-            android:id="@+id/action_publishFragment_to_consignmentFragment"
-            app:destination="@id/consignmentFragment" />
-        <action
-            android:id="@+id/action_publishFragment_to_listingFragment"
-            app:destination="@id/listingFragment" />
-    </fragment>
+    android : id = "@+id/navigation_publish"
+    android : name = "com.greendrading.app.ui.publish.PublishFragment"
+    android : label = "发布">
+    <action
+    android : id = "@+id/action_publishFragment_to_shareGoodFindsFragment"
+    app : destination = "@id/shareGoodFindsFragment" / >
+    <action
+    android : id = "@+id/action_publishFragment_to_quickSellFragment"
+    app : destination = "@id/quickSellFragment" / >
+    <action
+    android : id = "@+id/action_publishFragment_to_consignmentFragment"
+    app : destination = "@id/consignmentFragment" / >
+    <action
+    android : id = "@+id/action_publishFragment_to_listingFragment"
+    app : destination = "@id/listingFragment" / >
+    < / fragment>
 
     <fragment
-        android:id="@+id/navigation_message"
-        android:name="com.greendrading.app.ui.message.MessageFragment"
-        android:label="消息" >
-        <action
-            android:id="@+id/action_navigation_message_to_invitationDetailFragment"
-            app:destination="@id/invitationDetailFragment" />
-        <action
-            android:id="@+id/action_navigation_message_to_chatDetailFragment"
-            app:destination="@id/chatDetailFragment" />
-    </fragment>
+    android : id = "@+id/navigation_message"
+    android : name = "com.greendrading.app.ui.message.MessageFragment"
+    android : label = "消息" >
+    <action
+    android : id = "@+id/action_navigation_message_to_invitationDetailFragment"
+    app : destination = "@id/invitationDetailFragment" / >
+    <action
+    android : id = "@+id/action_navigation_message_to_chatDetailFragment"
+    app : destination = "@id/chatDetailFragment" / >
+    < / fragment>
 
     <fragment
-        android:id="@+id/navigation_profile"
-        android:name="com.greendrading.app.ProfileFragment"
-        android:label="我的" />
+    android : id = "@+id/navigation_profile"
+    android : name = "com.greendrading.app.ProfileFragment"
+    android : label = "我的" / >
 
     <fragment
-        android:id="@+id/shareGoodFindsFragment"
-        android:name="com.greendrading.app.ui.publish.ShareGoodFindsFragment"
-        android:label="晒好物" />
+    android : id = "@+id/shareGoodFindsFragment"
+    android : name = "com.greendrading.app.ui.publish.ShareGoodFindsFragment"
+    android : label = "晒好物" / >
 
     <fragment
-        android:id="@+id/quickSellFragment"
-        android:name="com.greendrading.app.ui.publish.QuickSellFragment"
-        android:label="拍图自己卖" />
+    android : id = "@+id/quickSellFragment"
+    android : name = "com.greendrading.app.ui.publish.QuickSellFragment"
+    android : label = "拍图自己卖" / >
 
     <fragment
-        android:id="@+id/consignmentFragment"
-        android:name="com.greendrading.app.ui.publish.ConsignmentFragment"
-        android:label="寄卖服务" />
+    android : id = "@+id/consignmentFragment"
+    android : name = "com.greendrading.app.ui.publish.ConsignmentFragment"
+    android : label = "寄卖服务" / >
 
     <fragment
-        android:id="@+id/listingFragment"
-        android:name="com.greendrading.app.ui.publish.ListingFragment"
-        android:label="自主保管" />
+    android : id = "@+id/listingFragment"
+    android : name = "com.greendrading.app.ui.publish.ListingFragment"
+    android : label = "自主保管" / >
 
     <fragment
-        android:id="@+id/my_collection_fragment"
-        android:name="com.example.yourapp.ui.MyCollectionFragment"
-        android:label="我的收藏" />
+    android : id = "@+id/searchFragment"
+    android : name = "com.greendrading.app.SearchFragment"
+    android : label = "搜索" / >
 
     <fragment
-        android:id="@+id/my_history_fragment"
-        android:name="com.example.yourapp.ui.MyHistoryFragment"
-        android:label="历史浏览" />
+    android : id = "@+id/homeCategoryFragment"
+    android : name = "com.greendrading.app.HomeCategoryFragment"
+    android : label = "分类" / >
 
     <fragment
-        android:id="@+id/my_follow_fragment"
-        android:name="com.greendrading.app.ui.MyFollowFragment"
-        android:label="我的关注" />
-
-    <fragment
-        android:id="@+id/my_coupons_fragment"
-        android:name="com.greendrading.app.ui.MyCouponsFragment"
-        android:label="红包卡券" />
-
-    <fragment
-        android:id="@+id/my_posts_fragment"
-        android:name="com.greendrading.app.ui.MyPostsFragment"
-        android:label="我发布的" />
-
-    <fragment
-        android:id="@+id/my_sold_items_fragment"
-        android:name="com.greendrading.app.ui.MySoldItemsFragment"
-        android:label="我卖出的" />
-
-    <fragment
-        android:id="@+id/my_purchased_items_fragment"
-        android:name="com.greendrading.app.ui.MyPurchasedItemsFragment"
-        android:label="MyPurchasedItemsFragment" />
-
-    <fragment
-        android:id="@+id/pending_review_fragment"
-        android:name="com.greendrading.app.ui.PendingReviewFragment"
-        android:label="PendingReviewFragment" />
-
-    <fragment
-        android:id="@+id/settings_fragment"
-        android:name="com.greendrading.app.ui.SettingsFragment"
-        android:label="SettingsFragment" />
-
-    <fragment
-        android:id="@+id/service_terms_fragment"
-        android:name="com.greendrading.app.ui.ServiceTermsFragment"
-        android:label="ServiceTermsFragment" />
-
-    <fragment
-        android:id="@+id/online_customer_service_fragment"
-        android:name="com.greendrading.app.ui.OnlineCustomerServiceFragment"
-        android:label="OnlineCustomerServiceFragment" />
-
-    <fragment
-        android:id="@+id/about_us_fragment"
-        android:name="com.greendrading.app.ui.AboutUsFragment"
-        android:label="AboutUsFragment" />
-
-    <fragment
-        android:id="@+id/shopping_cart_fragment"
-        android:name="com.greendrading.app.ui.ShoppingCartFragment"
-        android:label="ShoppingCartFragment" />
-  
-    <fragment
-        android:id="@+id/searchFragment"
-        android:name="com.greendrading.app.SearchFragment"
-        android:label="搜索" />
-
-    <fragment
-        android:id="@+id/homeCategoryFragment"
-        android:name="com.greendrading.app.HomeCategoryFragment"
-        android:label="分类" />
-
-    <fragment
-        android:id="@+id/shoppingListFragment"
-        android:name="com.greendrading.app.ShoppingListFragment"
-        android:label="商品页">
-        <action
-            android:id="@+id/action_shoppingListFragment_to_productDetailFragment"
-            app:destination="@id/productDetailFragment" />
-    </fragment>
+    android : id = "@+id/shoppingListFragment"
+    android : name = "com.greendrading.app.ShoppingListFragment"
+    android : label = "商品页">
+    <action
+    android : id = "@+id/action_shoppingListFragment_to_productDetailFragment"
+    app : destination = "@id/productDetailFragment" / >
+    < / fragment>
 
     <fragment
     android : id = "@+id/productDetailFragment"
@@ -226,7 +161,8 @@
     android : label = "陌生人聊天详情" / >
 
     <fragment
-        android:id="@+id/knowledgeQaDetailFragment"
-        android:name="com.greendrading.app.ui.message.KnowledgeQaDetailFragment"
-        android:label="知识问答助手详情" />
-</navigation> 
+    android : id = "@+id/knowledgeQaDetailFragment"
+    android : name = "com.greendrading.app.ui.message.KnowledgeQaDetailFragment"
+    android : label = "知识问答助手详情" / >
+
+    < / navigation>
