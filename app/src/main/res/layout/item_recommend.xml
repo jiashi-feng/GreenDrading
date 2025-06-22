@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="240dp"
+    android:layout_height="280dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="false"
+    app:cardPreventCornerOverlap="false"
+    app:contentPadding="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_product"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- 包邮标签 -->
+        <TextView
+            android:id="@+id/tv_shipping_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_tag_rounded_corners"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="2dp"
+            android:text="包邮"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintTop_toBottomOf="@id/iv_product"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- 价格 -->
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="9.8元"
+            app:layout_constraintTop_toTopOf="@id/tv_shipping_tag"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shipping_tag"
+            app:layout_constraintStart_toEndOf="@id/tv_shipping_tag"
+            android:layout_marginStart="4dp"/>
+
+        <!-- 用户评价 -->
+        <TextView
+            android:id="@+id/tv_user_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="22人说价格真香"
+            app:layout_constraintTop_toTopOf="@id/tv_shipping_tag"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shipping_tag"
+            app:layout_constraintStart_toEndOf="@id/tv_price"
+            app:layout_constraintEnd_toStartOf="@id/ll_stars"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- 星级 -->
+        <LinearLayout
+            android:id="@+id/ll_stars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="@id/tv_shipping_tag"
+            app:layout_constraintBottom_toBottomOf="@id/tv_shipping_tag"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp">
+            <ImageView android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/ic_star_filled" android:layout_marginEnd="1dp"/>
+            <ImageView android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/ic_star_filled" android:layout_marginEnd="1dp"/>
+            <ImageView android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/ic_star_filled" android:layout_marginEnd="1dp"/>
+            <ImageView android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/ic_star_filled" android:layout_marginEnd="1dp"/>
+            <ImageView android:layout_width="10dp" android:layout_height="10dp" android:src="@drawable/ic_star_filled"/>
+        </LinearLayout>
+
+        <!-- 标题 -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:text="30颗多肉品种"
+            app:layout_constraintTop_toBottomOf="@id/tv_shipping_tag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- 地点图标 -->
+        <ImageView
+            android:id="@+id/iv_location_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/ic_location_on"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"/>
+
+        <!-- 地点 -->
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="10sp"
+            android:text="上海"
+            app:layout_constraintTop_toTopOf="@id/iv_location_icon"
+            app:layout_constraintBottom_toBottomOf="@id/iv_location_icon"
+            app:layout_constraintStart_toEndOf="@id/iv_location_icon"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- 标签 -->
+        <TextView
+            android:id="@+id/tv_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_tag_rounded_corners"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="2dp"
+            android:text="该用户信用良好"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintTop_toTopOf="@id/tv_location"
+            app:layout_constraintBottom_toBottomOf="@id/tv_location"
+            app:layout_constraintStart_toEndOf="@id/tv_location"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView> 

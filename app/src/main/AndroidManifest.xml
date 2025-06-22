@@ -20,6 +20,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.greendrading.app.ui.productdetail.ProductDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.greendrading.app.ui.productdetail.BegoniaDetailActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.greendrading.app.ui.dailyshopping.DailyShoppingActivity"
+            android:exported="false"/>
+        <activity
+            android:name="com.greendrading.app.ui.logistics.LogisticsActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
