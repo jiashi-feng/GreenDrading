@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_main"
-    app:startDestination="@id/navigation_home">
+< ? xml version = "1.0" encoding = "utf-8" ? >
+<navigation xmlns : android = "http://schemas.android.com/apk/res/android"
+    xmlns : app = "http://schemas.android.com/apk/res-auto"
+    android : id = "@+id/nav_main"
+    app : startDestination = "@id/navigation_home">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -167,63 +167,63 @@
     </fragment>
 
     <fragment
-        android:id="@+id/productDetailFragment"
-        android:name="com.greendrading.app.ProductDetailFragment"
-        android:label="商品详情">
-        <argument
-            android:name="productId"
-            app:argType="string" />
-        <action
-            android:id="@+id/action_productDetailFragment_to_confirmPaymentFragment"
-            app:destination="@id/confirmPaymentFragment" />
-    </fragment>
+    android : id = "@+id/productDetailFragment"
+    android : name = "com.greendrading.app.ProductDetailFragment"
+    android : label = "商品详情">
+    <argument
+    android : name = "productId"
+    app : argType = "string" / >
+    <action
+    android : id = "@+id/action_productDetailFragment_to_confirmPaymentFragment"
+    app : destination = "@id/confirmPaymentFragment" / >
+    < / fragment>
 
     <fragment
-        android:id="@+id/confirmPaymentFragment"
-        android:name="com.greendrading.app.ConfirmPaymentFragment"
-        android:label="确认支付" />
+    android : id = "@+id/confirmPaymentFragment"
+    android : name = "com.greendrading.app.ConfirmPaymentFragment"
+    android : label = "确认支付" / >
 
     <fragment
-        android:id="@+id/careTipsFragment"
-        android:name="com.greendrading.plant.care.CareTipsFragment"
-        android:label="养护技巧" >
-        <action
-            android:id="@+id/action_careTipsFragment_to_careDetailFragment"
-            app:destination="@id/careDetailFragment" />
-    </fragment>
+    android : id = "@+id/careTipsFragment"
+    android : name = "com.greendrading.plant.care.CareTipsFragment"
+    android : label = "养护技巧" >
+    <action
+    android : id = "@+id/action_careTipsFragment_to_careDetailFragment"
+    app : destination = "@id/careDetailFragment" / >
+    < / fragment>
 
     <fragment
-        android:id="@+id/careDetailFragment"
-        android:name="com.greendrading.plant.care.CareDetailFragment"
-        android:label="养护详情" >
-        <argument
-            android:name="careTitle"
-            app:argType="string" />
-        <argument
-            android:name="careImage"
-            app:argType="integer" />
-        <argument
-            android:name="careTips"
-            app:argType="string" />
-        <argument
-            android:name="careTools"
-            app:argType="string" />
-    </fragment>
+    android : id = "@+id/careDetailFragment"
+    android : name = "com.greendrading.plant.care.CareDetailFragment"
+    android : label = "养护详情" >
+    <argument
+    android : name = "careTitle"
+    app : argType = "string" / >
+    <argument
+    android : name = "careImage"
+    app : argType = "integer" / >
+    <argument
+    android : name = "careTips"
+    app : argType = "string" / >
+    <argument
+    android : name = "careTools"
+    app : argType = "string" / >
+    < / fragment>
 
     <fragment
-        android:id="@+id/invitationDetailFragment"
-        android:name="com.greendrading.app.ui.message.InvitationDetailFragment"
-        android:label="邀请详情" />
+    android : id = "@+id/invitationDetailFragment"
+    android : name = "com.greendrading.app.ui.message.InvitationDetailFragment"
+    android : label = "邀请详情" / >
 
     <fragment
-        android:id="@+id/chatDetailFragment"
-        android:name="com.greendrading.app.ui.message.ChatDetailFragment"
-        android:label="聊天详情" />
+    android : id = "@+id/chatDetailFragment"
+    android : name = "com.greendrading.app.ui.message.ChatDetailFragment"
+    android : label = "聊天详情" / >
 
     <fragment
-        android:id="@+id/strangerChatDetailFragment"
-        android:name="com.greendrading.app.ui.message.StrangerChatDetailFragment"
-        android:label="陌生人聊天详情" />
+    android : id = "@+id/strangerChatDetailFragment"
+    android : name = "com.greendrading.app.ui.message.StrangerChatDetailFragment"
+    android : label = "陌生人聊天详情" / >
 
     <fragment
         android:id="@+id/knowledgeQaDetailFragment"

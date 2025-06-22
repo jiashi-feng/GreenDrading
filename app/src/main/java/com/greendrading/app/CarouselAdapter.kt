@@ -49,6 +49,7 @@ class CarouselAdapter(private val images: List<Int>) : RecyclerView.Adapter<Caro
             // 处理图片加载异常
         }
     }
+    
 
     override fun getItemCount(): Int {
         return images.size
