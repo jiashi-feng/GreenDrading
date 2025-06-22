@@ -197,10 +197,10 @@
         android:name="com.greendrading.plant.care.CareDetailFragment"
         android:label="养护详情" >
         <argument
-            android:name="careTitle"
+            android:name="ejoifiog"
             app:argType="string" />
         <argument
-            android:name="careImage"
+            android:name="fjoirjgp"
             app:argType="integer" />
         <argument
             android:name="careTips"
