@@ -212,7 +212,7 @@
 
     <fragment
         android:id="@+id/invitationDetailFragment"
-        android:name="com.greendrading.app.ui.message.InvitationDetailFragment"
+        android:name="com.greendrading.app.ui.message"
         android:label="邀请详情" />
 
     <fragment
@@ -224,11 +224,7 @@
         android:id="@+id/strangerChatDetailFragment"
         android:name="com.greendrading.app.ui.message.StrangerChatDetailFragment"
         android:label="陌生人聊天详情" />
-
-    <fragment
-        android:id="@+id/my_collection_fragment"
-        android:name="com.example.yourapp.ui.MyCollectionFragment"
-        android:label="我的收藏" />
+        
 
     <fragment
         android:id="@+id/knowledgeQaDetailFragment"
