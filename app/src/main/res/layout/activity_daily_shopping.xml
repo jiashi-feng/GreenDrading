@@ -16,8 +16,8 @@
         android:gravity="center_vertical"
         android:paddingHorizontal="16dp"
         android:background="@color/primary_light"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="fjeoofj"s
+        app:layout_constraintStart_toStartOf="nt"
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
