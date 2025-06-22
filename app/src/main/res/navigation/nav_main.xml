@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/navigation_home"
         android:name="com.greendrading.app.HomeFragment"
-        android:label="首页">
+        android:label="首页 🏠">
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
@@ -25,12 +25,12 @@
     <fragment
         android:id="@+id/navigation_shop"
         android:name="com.greendrading.app.ShopFragment"
-        android:label="购物" />
+        android:label="购物 🛒" />
 
     <fragment
         android:id="@+id/navigation_publish"
         android:name="com.greendrading.app.ui.publish.PublishFragment"
-        android:label="发布">
+        android:label="发布 ➕">
         <action
             android:id="@+id/action_publishFragment_to_shareGoodFindsFragment"
             app:destination="@id/shareGoodFindsFragment" />
@@ -48,19 +48,28 @@
     <fragment
         android:id="@+id/navigation_message"
         android:name="com.greendrading.app.ui.message.MessageFragment"
-        android:label="消息" >
+        android:label="消息 💬" >
         <action
             android:id="@+id/action_navigation_message_to_invitationDetailFragment"
             app:destination="@id/invitationDetailFragment" />
         <action
             android:id="@+id/action_navigation_message_to_chatDetailFragment"
             app:destination="@id/chatDetailFragment" />
+        <action
+            android:id="@+id/action_navigation_message_to_newMessageFragment"
+            app:destination="@id/newMessageFragment" />
+        <action
+            android:id="@+id/action_navigation_message_to_messageSettingsFragment"
+            app:destination="@id/messageSettingsFragment" />
+        <action
+            android:id="@+id/action_navigation_message_to_messageNotificationFragment"
+            app:destination="@id/messageNotificationFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.greendrading.app.ProfileFragment"
-        android:label="我的" />
+        android:label="我的 👤" />
 
     <fragment
         android:id="@+id/shareGoodFindsFragment"
@@ -85,7 +94,7 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.greendrading.app.SearchFragment"
-        android:label="搜索" />
+        android:label="搜索 🔍" />
 
     <fragment
         android:id="@+id/homeCategoryFragment"
@@ -144,6 +153,21 @@
             android:name="careTools"
             app:argType="string" />
     </fragment>
+
+    <fragment
+        android:id="@+id/newMessageFragment"
+        android:name="com.greendrading.app.ui.message.NewMessageFragment"
+        android:label="新建消息 ✉️" />
+
+    <fragment
+        android:id="@+id/messageSettingsFragment"
+        android:name="com.greendrading.app.ui.message.MessageSettingsFragment"
+        android:label="消息设置 ⚙️" />
+
+    <fragment
+        android:id="@+id/messageNotificationFragment"
+        android:name="com.greendrading.app.ui.message.MessageNotificationFragment"
+        android:label="消息通知 🔔" />
 
     <fragment
         android:id="@+id/invitationDetailFragment"
